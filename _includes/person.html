@@ -1,0 +1,28 @@
+{% assign preferred_name = person.preferred_name | default: person.name %}
+<li>
+    {% if person.webpage %}
+        <a href="{{ person.webpage }}">{{ preferred_name }}</a>
+    {% else %}
+        {{ preferred_name }}
+    {% endif %}
+    ({{ person.enrollment }})
+</li>
+{% if person.headshot %}
+     <img src="{{ person.headshot }}" style="float:left; width:100pt; padding-bottom:10px; padding-right:10px;"  alt="{{ preferred_name }}"/>
+{% endif %}
+<p style="margin-top: 0; margin-bottom: 0;">
+    {{ person.bio }}
+    {% assign person_pubs = site.data.pubs | where: "authors", person.name %}
+    {% if person_pubs.size > 0 %}
+        <details style="margin-top: 0; margin-bottom: 0;">
+            <summary style="color: #A9A9A9;">Publications</summary>
+            {% assign highlighted_names = person.name %}
+            <ul style="margin-bottom: 0;">
+                {% for pub in person_pubs %}
+                    {% include pub.html %}
+                {% endfor %}
+            </ul>
+        </details>
+    {% endif %}
+</p>
+<div style="clear: both;"></div>
