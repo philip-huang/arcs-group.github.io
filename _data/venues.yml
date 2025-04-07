@@ -1,0 +1,75 @@
+# _data/journals.yml
+
+arXiv:
+  name: arXiv
+  type: arXiv
+
+############### Conference ##################
+AAAI:
+  name: "AAAI Conference on Artificial Intelligence"
+  short_name: AAAI
+  type: conference
+AAMAS:
+  name: "International Joint Conference on Autonomous Agents and Multi-Agent Systems"
+  short_name: AAMAS
+  type: conference
+AIAA:
+  name: AIAA Aviation Forum
+  short_name: AIAA
+  type: conference
+CASE:
+  name: "IEEE International Conference on Automation Science and Engineering"
+  short_name: CASE
+  type: conference
+EAAI:
+  name: "Symposium on Educational Advances in Artificial Intelligence"
+  short_name: EAAI
+  type: conference
+ICAPS:
+  name: "International Conference on Automated Planning and Scheduling"
+  short_name: ICAPS
+  type: conference
+ICLR:
+  name: "International Conference on Learning Representations"
+  short_name: ICLR
+  type: conference
+ICRA:
+  name: "IEEE International Conference on Robotics and Automation"
+  short_name: ICRA
+  type: conference
+IJCAI:
+  name: "International Joint Conference on Artificial Intelligence"
+  short_name: IJCAI
+  type: conference
+IROS:
+  name: "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+  short_name: IROS
+  type: conference
+MRS:
+  name: "International Symposium on Multi-Robot and Multi-Agent Systems"
+  short_name: MRS
+  type: conference
+NeurIPS:
+  name: "Conference on Neural Information Processing Systems"
+  short_name: NeurIPS
+  type: conference
+PRIMA:
+  name: "International Conference on Principles and Practice of Multi-Agent Systems"
+  short_name: PRIMA
+  type: conference
+SoCS:
+  name: "Symposium on Combinatorial Search"
+  short_name: SoCS
+  type: conference
+
+
+############### Journal ##################
+AIJ:
+  name: "Artificial Intelligence"
+  type: journal
+AutoRobots:
+  name: "Autonomous Robots"
+  type: journal
+RAL:
+  name: "IEEE Robotics and Automation Letters"
+  type: journal

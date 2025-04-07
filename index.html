@@ -1,13 +1,41 @@
 ---
 layout: page
 title: ARCS Lab
+title-img: "/assets/img/avatar-arcs.png"
 subtitle: Empowering robots to collaborate intelligently and efficiently
-cover-img: "/assets/img/arcs-logo.png"
 ---
 
-<p> The Artificial Intelligence for Robot Coordination at Scale (ARCS) Lab at the
-    <a href="https://www.ri.cmu.edu">Carnegie Mellon University (CMU) Robotics Institute</a>
-    brings together researchers to address the challenges of multi-robot collaboration.
-    Our research focuses on developing planning and learning methods for
-    large teams of autonomous agents to accomplish collaborative tasks intelligently in dynamic environments.
+<div id="frontpageCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+  <div class="carousel-inner">
+    {% for item in site.data.carousel %}
+    <div class="carousel-item {% if forloop.first %}active{% endif %} position-relative">
+      <div class="ratio ratio-16x9 bg-secondary">
+        <img src="{{ item.image }}"
+             class="img-fluid top-50 start-50 position-absolute translate-middle"
+             style="max-height: 100%; width: auto; object-fit: contain;"
+             loading="eager"
+             alt="{{ item.image_alt }}">
+      </div>
+      <div class="carousel-caption d-none d-md-block caption-{{ item.caption_style | default: 'light' }}">
+        <h5>{{ item.title }}</h5>
+        <p>{{ item.caption }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#frontpageCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#frontpageCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<p>
+  The <b>Artificial Intelligence for Robot Coordination at Scale (ARCS) Lab</b> at the
+  <a href="https://www.ri.cmu.edu">Carnegie Mellon University (CMU) Robotics Institute</a>
+  brings together researchers to address the challenges of multi-robot collaboration.
+  Our research focuses on developing planning and learning methods for
+  large teams of autonomous agents to accomplish collaborative tasks intelligently in dynamic environments.
 </p>

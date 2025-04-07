@@ -1,129 +1,94 @@
 ---
-layout: page
-title: "Research"
+layout: default
+title: "Research Areas"
 permalink: /research/
-author_profile: true
 ---
 
-{% include base_path %}
+<!-- TODO: add sections on TPG, env opt, and learning-based MAPF -->
 
-My research focuses on developing fundamental algorithms that enable large teams of autonomous agents
+# Research Areas 
+
+Our research focuses on developing fundamental algorithms that enable large teams of autonomous agents
 to accomplish collaborative tasks intelligently in dynamic environments.
-Applications of my research include
-mobile robot coordination for automated warehousing and, in general, nonholonomic robot teams,
-drone swarm control,
-multi-arm assembly,
-character control in video games,
-and traffic management for airports, railway networks, and road intersections with autonomous cars.
 
-<link rel="stylesheet" href="../assets/css/imagehovertext.css">
+A summary of our ongoing research can be found [here](/pdfs/ARCS-2024-Orientation-Poster.pdf) \[updated: August 2024\].
 
-<div class="container">
-    <div class="tile is-ancestor is-flex-wrap">
-        <!-- MAPF -->
-        <div class="tile is-parent">
-            <div class="tile is-child card">
-                <p class="image__title"> Foundations of Multi-Agent Path Finding (MAPF) </p>
-                <div class="image">
-                    <a href="/research/mapf/">
-                        <img class="image__img" src="../images/mapf-demo.gif" alt="MAPF">
-                        <div class="image__overlay image__overlay--blur">
-                            <p class="image__description">
-                                Developing principled algorithms to solve challenging MAPF instances
-                                via a variety of AI and optimization technologies, such as
-                                constraint reasoning, heuristic search, stochastic local search, and machine learning.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- warehouse -->
-        <div class="tile is-parent">
-            <div class="tile is-child card">
-                <p class="image__title"> Coordination of Large Robot Teams in Automated Warehouses </p>
-                <div class="image">
-                    <a href="/research/warehouse/">
-                        <img class="image__img" src="/images/warehouse-5x.gif" alt="MAPF">
-                        <div class="image__overlay image__overlay--blur">
-                            <p class="image__description">
-                                Combing task planning, path planning, and execution
-                                to coordinate thousands of mobile robots
-                                to fulfill delivery tasks in automated warehouses.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- robotic arms -->
-        <div class="tile is-parent">
-            <div class="tile is-child card">
-                <p class="image__title"> Multi-Arm Assembly </p>
-                <div class="image">
-                    <a href="/research/arm/">
-                        <img class="image__img" src="../images/bar.gif" alt="Robotic Arms">
-                        <div class="image__overlay image__overlay--blur">
-                            <p class="image__description">
-                                Developing combined task and motion planning frameworks
-                                to jointly plan safe, low-cost plans
-                                for a team of robots to assemble complex spatial structures.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- traffic -->
-        <div class="tile is-parent">
-            <div class="tile is-child card">
-                <p class="image__title"> Intelligent Traffic Management </p>
-                <div class="image">
-                    <a href="/research/traffic/">
-                        <img class="image__img" src="../images/flatland.gif" alt="Railway Planning">
-                        <div class="image__overlay image__overlay--blur">
-                            <p class="image__description">
-                                Developing intelligent planning systems to coordinate
-                                trains, airplanes, autonomous vehicle, etc. on complex road networks under uncertainty.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- drones -->
-        <div class="tile is-parent">
-            <div class="tile is-child card">
-                <p class="image__title"> MAPF Generalizations for Heterogeneous and Nonholonomic Robots </p>
-                <div class="image">
-                    <a href="/research/drones/">
-                        <img class="image__img" src="../images/drone_side.gif" alt="Drones">
-                        <!--<img class="image__img" src="../images/drone_top.gif" alt="Robotic Arms">-->
-                        <div class="image__overlay image__overlay--blur">
-                            <p class="image__description">
-                                Develop principled algorithms for solving MAPF.
-                                Drone Swarms Coordination
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- others -->
-        <div class="tile is-parent">
-            <div class="tile is-child card">
-                <p class="image__title"> Other Projects </p>
-                <div class="image">
-                    <a href="/research/others/">
-                        <img class="image__img" src="../images/3d-fastmap.png" alt="FastMap">
-                        <div class="image__overlay image__overlay--blur">
-                            <p class="image__description"> Graph embeddings, multi-agent meeting problems, etc. </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+---------------------
 
-<br style = "line-height:5;">
+### Multi-Agent Path Finding (MAPF)
+<img src="/images/mapf-demo.gif" style="float:right;width:150pt;padding-left:10px;"/>
+We aim to develop principled algorithms to solve challenging MAPF instances 
+via a variety of AI and optimization technologies, such as
+constraint reasoning, heuristic search, stochastic local search, and machine learning.
+
+- [Research overview on MAPF algorithms](/mapf) \[updated: September 2022\].
+- [Research overview on generalizing MAPF for various multi-robot systems](/mamp) \[updated: September 2022\].
+
+<details style="margin-top: 0; margin-bottom: 0;">
+    <summary>Relevant publications</summary>
+    {% assign relevant_pubs = site.data.pubs | where: "tags", "mapf" %}
+    <ul style="margin-bottom: 0;">
+        {% for pub in relevant_pubs %}
+            {% include pub-list.html %}
+        {% endfor %}
+    </ul>
+</details>
+
+---------------------
+
+### Coordination of Large Robot Teams in Automated Warehouses
+<img src="/images/warehouse-5x.gif" style="float:right;width:200pt;padding-left:10px;"/>
+We aim to combine task planning, path planning, and execution 
+to coordinate thousands of mobile robots to fulfill delivery tasks in automated warehouses.
+
+- [Research overview](/warehouse) \[updated: September 2022\].
+
+<details style="margin-top: 0; margin-bottom: 0;">
+    <summary>Relevant publications</summary>
+    {% assign relevant_pubs = site.data.pubs | where: "tags", "warehouse" %}
+    <ul style="margin-bottom: 0;">
+        {% for pub in relevant_pubs %}
+            {% include pub-list.html %}
+        {% endfor %}
+    </ul>
+</details>
+
+---------------------
+
+### Multi-Robotic-Arm Cooperative Manipulation
+<img src="/images/bar.gif" style="float:right;width:150pt;padding-left:10px;"/>
+We aim to develop combined task planning, motion planning, and execution frameworks
+to jointly plan safe, low-cost plans
+for a team of robotic arms to perform cooperative manipulation and assembly. 
+
+- [Dual-arm lego assembly](https://intelligent-control-lab.github.io/APEX-MR/) \[updated: January 2025\].
+- [Research overview](/arm) \[updated: September 2022\].
+
+<details style="margin-top: 0; margin-bottom: 0;">
+    <summary>Relevant publications</summary>
+    {% assign relevant_pubs = site.data.pubs | where: "tags", "arm" %}
+    <ul style="margin-bottom: 0;">
+        {% for pub in relevant_pubs %}
+            {% include pub-list.html %}
+        {% endfor %}
+    </ul>
+</details>
+
+---------------------
+
+### Intelligent Traffic Management
+<img src="/images/flatland.gif" style="float:right;width:200pt;padding-left:10px;"/>
+We aim to develop intelligent planning systems to coordinate
+trains, airplanes, autonomous vehicle, etc. on complex road networks under uncertainty.
+
+- [Research overview](/traffic) \[updated: September 2022\].
+
+<details style="margin-top: 0; margin-bottom: 0;">
+    <summary>Relevant publications</summary>
+    {% assign relevant_pubs = site.data.pubs | where: "tags", "traffic" %}
+    <ul style="margin-bottom: 0;">
+        {% for pub in relevant_pubs %}
+            {% include pub-list.html %}
+        {% endfor %}
+    </ul>
+</details>

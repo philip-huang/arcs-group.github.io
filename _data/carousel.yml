@@ -1,0 +1,33 @@
+#- image:
+#  alt:
+#  title:
+#  caption:
+#  caption_style: "light"  # White text for dark backgrounds or
+#  caption_style: "dark"   # Dark text for light backgrounds
+
+- image: "/photos/lab/group_03242024.jpg"
+  alt: "Team Photo"
+  title: "Welcome to ARCS Lab"
+  caption_style: "light"  # White text for dark backgrounds
+
+- image: "/images/warehouse-5x.gif"
+  alt: "Warehouse Automation"
+  title: "Warehouse Automation"
+  caption: "Coordinating thousands of robots for goods transport"
+  caption_style: "light"  # White text for dark backgrounds
+
+- image: "/images/cubes-shelf.gif"
+  alt: "Multi-Robotic-Arm Motion Planning"
+  title: "Multi-Robotic-Arm Motion Planning"
+  caption_style: "light"  # White text for dark backgrounds
+
+- image: "/images/faucet_assembly.gif"
+  alt: "Robotic Assembly"
+  title: "Dual-Arm LEGO Assembly"
+  caption: "Cooperative Assembly with multiple Manipulators"
+  caption_style: "light"  # White text for dark backgrounds
+
+- image: "/images/flatland.gif"
+  alt: "Flatland"
+  title: "Railway Coordination"
+  caption_style: "light"   # Dark text for light backgrounds

@@ -13,6 +13,7 @@
 #  year: null
 #  award: null
 #  doi: null
+#  tags: [mapf, warehouse, arm, traffic]
 #  links:
 #    arXiv: null
 #    code: null
@@ -40,6 +41,7 @@
   venue: ICRA
   pages: null
   year: 2025
+  tags: [mapf, warehouse]
   links:
     arXiv: https://arxiv.org/abs/2410.21415
 
@@ -50,6 +52,7 @@
   venue: ICRA
   pages: null
   year: 2025
+  tags: [mapf]
   links:
     arXiv: https://arxiv.org/abs/2409.14491
 
@@ -60,6 +63,7 @@
   venue: ICLR
   pages: null
   year: 2025
+  tags: [mapf]
   links:
     arXiv: https://arxiv.org/abs/2410.03072
     code: https://github.com/yoraish/mmd
@@ -72,6 +76,7 @@
   year: 2025
   award: null
   doi: null
+  tags: [warehouse]
   links:
     arXiv: https://arxiv.org/abs/2412.15908
     code: https://github.com/DiligentPanda/STPG
@@ -87,6 +92,7 @@
   pages: null
   year: 2025
   doi: null
+  tags: [warehouse]
   links:
     arXiv: https://arxiv.org/abs/2411.16506
     code: null
@@ -98,6 +104,7 @@
   pages: null
   year: 2025
   doi: null
+  tags: [warehouse, mapf]
   short_version:
     venue: SoCS
     year: 2024
@@ -114,6 +121,7 @@
   pages: null
   year: 2025
   doi: null
+  tags: [mapf]
   links:
     arXiv: https://arxiv.org/abs/2410.01798
 
@@ -143,6 +151,7 @@
   pages: null
   year: 2025
   doi: null
+  tags: [mapf]
   links:
     arXiv: https://arxiv.org/abs/2405.17794
 
@@ -154,6 +163,7 @@
   pages: 311-320
   year: 2024
   doi: 10.24963/ijcai.2024/35
+  tags: [warehouse]
   links:
       arXiv: https://arxiv.org/abs/2402.01446
       code: https://github.com/lunjohnzhang/ggo_public
@@ -166,6 +176,7 @@
   pages: 58-66
   year: 2024
   doi: 10.24963/ijcai.2024/7
+  tags: [mapf]
   links:
       arXiv: https://arxiv.org/abs/2401.17044
       code: https://github.com/lunjohnzhang/MAPF-Mechanism
@@ -178,6 +189,7 @@
   year: 2024
   doi: 10.1609/socs.v17i1.31565
   award: Winner of 2023 League of Robot Runners
+  tags: [mapf, warehouse]
   links:
       arXiv: https://arxiv.org/abs/2404.16162
       code: https://github.com/DiligentPanda/MAPF-LRR2023
@@ -189,6 +201,7 @@
   pages: 109--117
   year: 2024
   doi: 10.1609/socs.v17i1.31548
+  tags: [arm]
   links:
       arXiv: https://arxiv.org/abs/2405.01772
 
@@ -199,6 +212,7 @@
   pages: 134-142
   year: 2024
   doi: 10.1609/socs.v17i1.31551
+  tags: [warehouse]
   links:
     arXiv: https://arxiv.org/abs/2404.05223
     code: https://github.com/TachikakaMin/ITA-CBS2
@@ -210,6 +224,7 @@
   pages: 201-209
   year: 2024
   doi: 10.1609/icaps.v34i1.31477
+  tags: [warehouse]
   links:
     arXiv: https://arxiv.org/abs/2403.18145
     code: https://github.com/YinggggFeng/Switchable-Edge-Search
@@ -227,6 +242,7 @@
   pages: 623-632
   year: 2024
   doi: 10.1609/icaps.v34i1.31525
+  tags: [mapf]
   links:
     benchmark page: http://mapf.info/index.php/Main/Benchmarks
 
@@ -238,6 +254,7 @@
   pages: 597-606
   year: 2024
   doi: 10.1609/icaps.v34i1.31522
+  tags: [mapf]
   links:
     arXiv: https://arxiv.org/abs/2403.20300
 
@@ -249,6 +266,7 @@
   year: 2024
   doi: 10.1609/icaps.v34i1.31513
   award: Best Student Paper
+  tags: [arm]
   links:
     arXiv: https://arxiv.org/abs/2404.00143
 
@@ -260,6 +278,7 @@
   pages: 613-622
   year: 2024
   doi: 10.1609/icaps.v34i1.31524
+  tags: [mapf]
   links:
     code: https://github.com/FangjiW/BBMOCBS-approx
 
@@ -272,6 +291,7 @@
   pages: 3021-3028
   year: 2024
   doi: 10.1109/LRA.2024.3363543
+  tags: [mapf, traffic]
   links:
     code: https://github.com/JingtianYan/PSB-RAL
 
@@ -294,6 +314,7 @@
   pages: 20674-20682
   year: 2024
   doi: 10.1609/aaai.v38i18.30054
+  tags: [warehouse]
   links:
     arXiv: https://arxiv.org/abs/2308.11234
     code: https://github.com/nobodyczcz/Guided-PIBT
@@ -320,6 +341,7 @@
   pages: 1537-1558
   year: 2023
   doi: 10.1007/s10514-023-10148-y
+  tags: [arm]
 
 - key: TangMRS23
   title: "Solving Multi-Agent Target Assignment and Path Finding with a Single Constraint Tree"
@@ -370,6 +392,7 @@
   pages: 384-392
   year: 2023
   doi: 10.1609/icaps.v33i1.27217
+  tags: [mapf]
   links:
     code: https://github.com/bshen95/CBSH2-RTC-CHBP
 
@@ -380,6 +403,7 @@
   pages: 361-369
   year: 2023
   doi: 10.1609/icaps.v33i1.27214
+  tags: [mapf]
   links:
     code: https://github.com/wonderren/public_bbmocbs
 
@@ -391,6 +415,7 @@
   pages: 128-137
   year: 2023
   doi: 10.1609/icaps.v33i1.27187
+  tags: [mapf]
   links:
     code: https://github.com/mepear/MOMAPF
 
@@ -402,6 +427,7 @@
   year: 2023
   doi: 10.1609/icaps.v33i1.27194
   award: Best Student Paper Honorable Mention
+  tags: [warehouse]
 
 - key: LiAAAI23
   title: "Intersection Coordination with Priority-Based Search for Autonomous Vehicles"
@@ -410,6 +436,7 @@
   pages: 11578-11585
   year: 2023
   doi: 10.1609/aaai.v37i10.26368
+  tags: [traffic]
   links:
     code: https://github.com/theanhhoang/AIM
     talk: https://underline.io/lecture/67972-intersection-coordination-with-priority-based-search-for-autonomous-vehicles
@@ -565,6 +592,7 @@
   year: 2021
   award: "Winner of the NeurIPS'20 Flatland Challenge; ICAPS Best System Demonstration Award"
   doi: 10.1609/icaps.v31i1.15994
+  tags: [traffic]
   links:
     code: https://github.com/Jiaoyang-Li/Flatland
     demo: https://youtu.be/Pw4GBL1UhPA
@@ -663,6 +691,7 @@
   pages: 275-301
   year: 2021
   url: http://proceedings.mlr.press/v133/laurent21a.html
+  tags: [traffic]
   bib: >
     @inproceedings{Laurent21,
       title     = {Flatland Competition 2020: MAPF and MARL for Efficient Train Coordination on a Grid World},
@@ -809,6 +838,7 @@
   venue: AIAA
   year: 2019
   doi: 10.2514/6.2019-2930
+  tags: [traffic]
   links:
       code: https://github.com/nasa-airport/airport-simulation/tree/scheduler/add-jiaoyang-scheduler
 

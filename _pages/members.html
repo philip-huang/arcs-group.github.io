@@ -1,0 +1,27 @@
+---
+layout: default
+title: Members
+permalink: /members/
+---
+<h1> ARCS Lab Members </h1>
+
+A summary of each member's ongoing research can be found 
+<a href="/pdfs/ARCS-2024-Orientation-Poster.pdf">here</a> [updated: August 2024].
+
+{% assign roles_order = "faculty, postdoc, phd, masters, undergrad, visitor, alumnus" | split: ", " %}
+{% assign grouped_members = site.data.people | group_by: "role" %}
+
+{% for role in roles_order %}
+  {% assign group = grouped_members | where: "name", role | first %}
+  {% if group %}
+    {% assign display_name = site.role_display_names[group.name] | default: group.name %} 
+    <h2>{{ display_name }}</h2>
+    <ul>
+      {% for person in group.items %}
+        {% include person.html %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
+
+

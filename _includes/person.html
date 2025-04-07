@@ -12,17 +12,19 @@
 {% endif %}
 <p style="margin-top: 0; margin-bottom: 0;">
     {{ person.bio }}
-    {% assign person_pubs = site.data.pubs | where: "authors", person.name %}
-    {% if person_pubs.size > 0 %}
-        <details style="margin-top: 0; margin-bottom: 0;">
-            <summary style="color: #A9A9A9;">Publications</summary>
-            {% assign highlighted_names = person.name %}
-            <ul style="margin-bottom: 0;">
-                {% for pub in person_pubs %}
-                    {% include pub.html %}
-                {% endfor %}
-            </ul>
-        </details>
+    {% if person.role != "faculty" %}
+        {% assign person_pubs = site.data.pubs | where: "authors", person.name %}
+        {% if person_pubs.size > 0 %}
+            <details style="margin-top: 0; margin-bottom: 0;">
+                <summary style="color: #A9A9A9;">Publications</summary>
+                {% assign highlighted_names = person.name %}
+                <ul style="margin-bottom: 0;">
+                    {% for pub in person_pubs %}
+                        {% include pub-list.html %}
+                    {% endfor %}
+                </ul>
+            </details>
+        {% endif %}
     {% endif %}
 </p>
 <div style="clear: both;"></div>

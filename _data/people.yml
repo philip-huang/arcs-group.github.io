@@ -1,7 +1,7 @@
 # People
 
 - name: Jiaoyang Li
-  role: Faculty
+  role: faculty
   webpage: https://jiaoyangli.me/
   enrollment: Assistant Professor
   headshot: /photos/members/jiaoyangli.png
@@ -11,7 +11,7 @@
     such as combinatorial algorithms, heuristic search, scheduling and planning for robotics and transportation.
 
 - name: Philip Huang
-  role: PhD student
+  role: phd
   webpage: https://philip-huang.github.io/
   enrollment: RI PhD, Fall 2023
   headshot: /photos/members/philiphuang.jpg
@@ -21,7 +21,7 @@
     enable individual robots and robot teams to accomplish complex and long-horizon tasks in dynamic and uncertain environments.
 
 - name: Yorai Shaoul
-  role: PhD student
+  role: phd
   webpage: https://yoraish.com/
   enrollment: RI PhD, Fall 2022
   headshot: /photos/members/yoraishaoul.jpg
@@ -29,10 +29,8 @@
     His research interests span multi-robot task and motion planning, robotic manipulation, statistical learning, and computer vision. 
     He works to harness insights from established planning algorithms to address messy real-world challenges in manipulation.
 
-
-
 - name: Rishi Veerapaneni
-  role: PhD student
+  role: phd
   webpage: https://rishi-v.github.io/
   enrollment: RI PhD, Fall 2020
   headshot: /photos/members/rishiveerapaneni.png
@@ -43,7 +41,7 @@
     Previously, he double majored in EECS and Applied Math at UC Berkeley and was very active in teaching (EE16A, CS188, CS170 x2).
 
 - name: Jingtian Yan
-  role: PhD student
+  role: phd
   webpage: https://scholar.google.com/citations?user=JjaOG98AAAAJ&hl=en
   enrollment: RI PhD, Fall 2024
   headshot: /photos/members/jingtianyan.png
@@ -51,7 +49,7 @@
     His research interests include multi-robot coordination, autonomous exploration, and Multi-Agent Path Finding.
 
 - name: Yulun Zhang
-  role: PhD student
+  role: phd
   webpage: https://yulunzhang.net/
   enrollment: RI PhD, Fall 2022
   headshot: /photos/members/yulunzhang.jpg
@@ -63,7 +61,7 @@
 
 - name: He Jiang
   preferred_name: He (Rivers) Jiang
-  role: masters student
+  role: masters
   webpage: https://github.com/DiligentPanda
   enrollment: Master of Science in Robotics, Class 2025
   headshot: /photos/members/hejiang.jpg
@@ -75,7 +73,7 @@
     He is also interested in Soccer, Poker, Chinese Chess & Nintendo Switch, by the way.
 
 - name: Cheng Qian
-  role: undergraduate student
+  role: undergrad
   enrollment: CS undergraduate, Class 2025
 
 - name: Yifan Su
@@ -85,9 +83,9 @@
   headshot: /photos/members/yifansu.jpg
 
 - name: Yutong Wang
-  role: visitor
+  role: alumnus
   webpage: https://wyt2019suzhou.github.io/
-  enrollment: Visiting PhD student
+  enrollment: Visiting PhD student from National University of Singapore, 2024
   headshot: /photos/members/yutongwang.jpg
   bio: Yutong received a B.Sc. from Shanghai University in 2020 and an M.Sc. from National University of Singapore in 2021. 
     She is currently a third-year PhD student at National University of Singapore and began visiting Carnegie Mellon University in January 2024. 
