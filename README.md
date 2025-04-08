@@ -1,4 +1,142 @@
-# Beautiful Jekyll
+# Making changes to the website
+1. ALL changes must be done through github via 
+   1. creating a new branch, 
+   2. making modifications, and 
+   3. requesting a pull request.
+2. There are 2 ways to make modifcations:
+   1. *Locally*: develop and test on your local machine. See instructions [here](#set-up-and-develop-locally)
+   2. *Online*: make changes through the github page online. Simple editions, such as adding members or publications, can be done online.
+3. Make changes!
+
+If you are a **new member**, create a new folder in `/files/` with your full name. 
+This folder will be used to store all your files.
+
+## Add/Edit Publications
+Add a publication to the [publications page](https://arcs-group.github.io/publications/):
+1. Add relevant media to your folder in `/files/` if needed.
+2. Edit `_data/pubs.yml`:
+   - Copy the following template, paste it, and fill out the fields. Delete the rows that you don't need.
+   - Check previous examples and try your best to be consistent.
+```yaml
+- key: null  # the unique id for the paper; please follow the naming rule of the other papers
+  title: null 
+  site: null  # link to the external project page
+  authors: []
+  equal_contributions: [] # authors with asterisks
+  venue: null # Please always use the name as defined in venues.yml
+              # If venues.yml does not contain the venue, add it to venues.yml first
+  volume: null
+  number: null
+  pages: null
+  year: null
+  thumbnail: null  # Save to /files/[your-folder]/
+  award: null
+  doi: null
+  tags: []  # Current tags for research areas: [mapf, warehouse, arm, traffic]
+            # See the research areas page for more details.
+  links: # You can add additional links not listed below if needed
+    arXiv: null
+    Code: null
+    Poster: null
+    Slides: null
+    Talk: null
+  short_version:
+    venue: null
+    year: null
+    pages: null
+    url: null
+  abstract: null
+```
+3. If you do not have a project page, use the following steps to create a simple one:
+   1. Create a new file named `xxxxxx.md` (where *xxxxxx* is the key of the paper) in folder `/_publications/`.
+   2. Copy and paste the following code in the file, and change *xxxxxx* to the key of the paper (in two places). 
+   You can modify the page if you want, e.g., adding some media, etc. 
+```html
+---
+layout: publication
+permalink: /publications/xxxxxx/
+---
+{% assign pub_key = "xxxxxx" %}
+
+{% include base_path %}
+{% assign pub = null %}
+{% for p in site.data.pubs %}
+  {% if p.key == pub_key %}
+    {% assign pub = p %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% include pub-page.html %}
+```
+
+## Add/Edit Medias in Home Page
+Add a slide to the carousel in the [main page](https://arcs-group.github.io):
+- Follow previous examples and add it to `_data/carousel.yml`.
+
+## Add/Edit Lab Members
+Add yourself to the [members page](https://arcs-group.github.io/members/):
+1. Upload a SQUARE 1:1 ratio headshot photo to `/photos/members/`. Name the file with your full name. 
+2. Edit `_data/people.yml`:
+   - Copy the following template, paste it, and fill out the fields. 
+   - Check previous examples and try your best to be consistent.
+```yaml
+- name: null
+  role: null  # select from [faculty, postdoc, phd, masters, undergrad, visitor, alumnus]
+  webpage: null
+  enrollment: null
+  headshot: /photos/members/yourname.jpg # change the file name accordingly
+  bio: null
+```
+
+# Set up and develop Locally 
+
+1. Install Prerequisites
+
+You'll neeed to install:
+- Ruby
+- Bundler
+- Jekyll
+
+For macOS (using Homebrew):
+```bash script
+brew install ruby
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+gem install bundler jekyll
+```
+
+For Ubuntu/Debian:
+```bash script
+sudo apt-get install ruby-full build-essential zlib1g-dev
+echo '# Install Ruby Gems to ~/.gem' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/.gem"' >> ~/.bashrc
+echo 'export PATH="$HOME/.gem/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+gem install bundler jekyll
+```
+
+2. Install Required Gems
+```bash script
+bundle install
+```
+
+3. Clone the GitHub repo by
+```bash script
+git clone git@github.com:arcs-group/arcs-group.github.io.git
+```
+
+4. Serve the Site Locally
+
+Change the working directory to the `arcs-group.github.io` folder and
+
+```bash script
+bundle exec jekyll serve --livereload
+```
+
+You can then go to http://localhost:4000 and should see the cite running locally!
+
+
+# Credit to the template: Beautiful Jekyll
 
 [![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
 

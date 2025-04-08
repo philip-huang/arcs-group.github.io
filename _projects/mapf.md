@@ -5,7 +5,7 @@ permalink: /mapf/
 ---
 <h1>Foundations of Multi-Agent Path Finding</h1>
 
-<img src="https://jiaoyangli.me/images/mapf-demo.gif" title="mapf demo" style="float:right;width:200pt;padding-left:10px;"  alt="mapf demo"/>
+<img src="/files/jiaoyangli/images/mapf-demo.gif" title="mapf demo" style="float:right;width:200pt;padding-left:10px;"  alt="mapf demo"/>
 Recent advances in robotics have laid the foundation for building large-scale multi-agent systems. 
 A great deal of research has focused on coordinating agents to fulfill different types of tasks. 
 We focus on one fundamental task - 
@@ -27,7 +27,7 @@ The diagram below summarizes the empirical performance of some of our MAPF algor
 in comparison to some baseline MAPF algorithms (dashed lines).
 Success rate is the percentage of MAPF instances solved within a runtime limit of one minute.
 <p style="text-align:center;">
-<img src="https://jiaoyangli.me/images/benchmark.png" title="mapf demo" width="800pt" alt="benchmark"/>
+<img src="/files/jiaoyangli/images/benchmark.png" title="mapf demo" width="800pt" alt="benchmark"/>
 </p>
 <details>
     <summary>Show more details of this empirical result.</summary>
@@ -51,24 +51,24 @@ Success rate is the percentage of MAPF instances solved within a runtime limit o
     </li>
     <li>
         CBSH2-RTC is ICBS with 
-        the WDG heuristic from <a href="https://jiaoyangli.me/publications/LiIJCAI19">our IJCAI'19 paper</a>, 
-        the RTC symmetry reasoning from <a href="https://jiaoyangli.me/publications/LiAIJ21">our AIJ'21 paper</a>, and 
+        the WDG heuristic from <a href="/publications/LiIJCAI19">our IJCAI'19 paper</a>, 
+        the RTC symmetry reasoning from <a href="/publications/LiAIJ21">our AIJ'21 paper</a>, and 
         the bypassing technique from <a href="https://www.ijcai.org/Abstract/15/110">[Boyarski et al IJCAI'15]</a>. 
         Check out the code <a href="https://github.com/Jiaoyang-Li/CBSH2-RTC">here</a>.  
     </li>
     <li>
         EECBS is the most advanced version of EECBS from 
-        <a href="https://jiaoyangli.me/publications/LiAAAI21eecbs">our AAAI'21 paper</a> plus SIPPS from 
-        <a href="https://jiaoyangli.me/publications/LiAAAI22">our AAAI'22 paper</a>.
+        <a href="/publications/LiAAAI21eecbs">our AAAI'21 paper</a> plus SIPPS from 
+        <a href="/publications/LiAAAI22">our AAAI'22 paper</a>.
         Check out the code <a href="https://github.com/Jiaoyang-Li/EECBS">here</a>.  
     </li>
     <li>
-        PBS is PBS from <a href="https://jiaoyangli.me/publications/MaAAAI19">our AAAI'19 paper</a> 
-        plus SIPPS from <a href="https://jiaoyangli.me/publications/LiAAAI22"> our AAAI'22 paper</a>.
+        PBS is PBS from <a href="/publications/MaAAAI19">our AAAI'19 paper</a> 
+        plus SIPPS from <a href="/publications/LiAAAI22"> our AAAI'22 paper</a>.
         Check out the code <a href="https://github.com/Jiaoyang-Li/PBS">here</a>.  
     </li>
     <li>
-        MAPF-LNS2 is from <a href="https://jiaoyangli.me/publications/LiAAAI22"> our AAAI'22 paper</a>. 
+        MAPF-LNS2 is from <a href="/publications/LiAAAI22"> our AAAI'22 paper</a>. 
         Check out the code <a href="https://github.com/Jiaoyang-Li/MAPF-LNS2">here</a>.  
     </li>
     </ul>
@@ -93,7 +93,7 @@ Success rate is the percentage of MAPF instances solved within a runtime limit o
 
 
 ## Symmetry Reasoning for MAPF
-<img src="https://jiaoyangli.me/images/rectangle.png" title="rectangle symmetry" style="float:left;width:250pt;padding-right:10px;"  alt="symmetry"/>
+<img src="/files/jiaoyangli/images/rectangle.png" title="rectangle symmetry" style="float:left;width:250pt;padding-right:10px;"  alt="symmetry"/>
 One of the reasons MAPF problems are so hard to solve is due to a phenomena called pairwise path symmetry, which occurs when two agents have many equivalent paths, all of which appear promising, but which are
 pairwise incompatible because they result in a collision. 
 The symmetry arises commonly in practice and can produce an exponential explosion in the space of possible collision resolutions, leading to unacceptable runtimes for currently state-of-the-art MAPF algorithms that employ heuristic search, such as Conflict-based Search (CBS).
@@ -105,21 +105,21 @@ reduce the number of expanded nodes and runtime of the optimal algorithm CBS by 
 thus can handle up to **30 times more agents** than possible before within one minute.         
 
 Relevant publications: 
-[1] [rectangle symmetry](https://jiaoyangli.me/publications/LiAAAI19symmetry), 
-[2] [corridor and target symmetries](https://jiaoyangli.me/publications/LiICAPS20), 
-[3] [generalized rectangle, target, and corridor symmetry reasoning](https://jiaoyangli.me/publications/LiAIJ21), 
-[4] [automatic symmetry reasoning by mutex propagation](https://jiaoyangli.me/publications/ZhangICAPS20) (**ICAPS'20 outstanding student paper**), 
-[5] [mutex propagation for SAT-based MAPF](https://jiaoyangli.me/publications/SurynekPRIMA20), 
-[6] [improved mutex propagation](https://jiaoyangli.me/publications/ZhangAIJ22),
-[7] [symmetry reasoning for k-robust MAPF](https://jiaoyangli.me/publications/ChenAAAI21robust),
-[8] [symmetry reasoning for agents of different shapes](https://jiaoyangli.me/publications/ZhangSoCS22),
-[9] [symmetry reasoning for train-like agents](https://jiaoyangli.me/publications/ChenSoCS22), 
-[10] [target symmetries used for MAPF with precedence constraints](https://jiaoyangli.me/publications/ZhangAAMAS22), and
-[11] [symmetry reasoning with bounded-suboptimal CBS](https://jiaoyangli.me/publications/LiAAAI21eecbs).
+[1] [rectangle symmetry](/publications/LiAAAI19symmetry), 
+[2] [corridor and target symmetries](/publications/LiICAPS20), 
+[3] [generalized rectangle, target, and corridor symmetry reasoning](/publications/LiAIJ21), 
+[4] [automatic symmetry reasoning by mutex propagation](/publications/ZhangICAPS20) (**ICAPS'20 outstanding student paper**), 
+[5] [mutex propagation for SAT-based MAPF](/publications/SurynekPRIMA20), 
+[6] [improved mutex propagation](/publications/ZhangAIJ22),
+[7] [symmetry reasoning for k-robust MAPF](/publications/ChenAAAI21robust),
+[8] [symmetry reasoning for agents of different shapes](/publications/ZhangSoCS22),
+[9] [symmetry reasoning for train-like agents](/publications/ChenSoCS22), 
+[10] [target symmetries used for MAPF with precedence constraints](/publications/ZhangAAMAS22), and
+[11] [symmetry reasoning with bounded-suboptimal CBS](/publications/LiAAAI21eecbs).
 
 
 ## Heuristics for MAPF with Conflict-Based Search
-<img src="https://jiaoyangli.me/images/heuristics.png" title="heuristic graph" style="float:left;width:250pt;padding-right:10px;" alt="heuristics"/>
+<img src="/files/jiaoyangli/images/heuristics.png" title="heuristic graph" style="float:left;width:250pt;padding-right:10px;" alt="heuristics"/>
 Conflict-Based Search (CBS) and its enhancements are among the strongest algorithms for MAPF. 
 However, existing variants of CBS do not use any heuristics that estimate future work.
 Introducing admissible heuristics to guide the high-level search of CBS can significantly reduce the size of the CBS search tree and its runtime.
@@ -134,14 +134,14 @@ find solutions that are **provably at most 2% worse than optimal** with **1,000 
 while, on the same map, state-of-the-art optimal algorithms can handle at most 200 agents.             
 
 Relevant publications: 
-[1] [CG heuristic for CBS](https://jiaoyangli.me/publications/FelnerICAPS18), 
-[2] [DG and WDG heuristics for CBS](https://jiaoyangli.me/publications/LiIJCAI19), 
-[3] [generalized WDG heuristic for CBS with large agents](https://jiaoyangli.me/publications/LiAAAI19large), and
-[3] [inadmissible heuristic for bounded-suboptimal CBS](https://jiaoyangli.me/publications/LiAAAI21eecbs).
+[1] [CG heuristic for CBS](/publications/FelnerICAPS18), 
+[2] [DG and WDG heuristics for CBS](e/publications/LiIJCAI19), 
+[3] [generalized WDG heuristic for CBS with large agents](/publications/LiAAAI19large), and
+[3] [inadmissible heuristic for bounded-suboptimal CBS](/publications/LiAAAI21eecbs).
 
 
 ## Large Neighborhood Search for MAPF
-<img src="https://jiaoyangli.me/images/lns-framework.png" title="LNS framework" style="float:left;width:500pt;padding-right:10px;" alt="heuristics"/>
+<img src="/files/jiaoyangli/images/lns-framework.png" title="LNS framework" style="float:left;width:500pt;padding-right:10px;" alt="heuristics"/>
 Sometimes, we are interested in a good solution but not necessarily a proof of how good the solution is. 
 Since providing optimality proofs is computationally expensive, 
 We develop Large Neighbor Search (LNS) algorithms 
@@ -153,11 +153,11 @@ solve 80% of the most challenging instances in the MAPF benchmark suite
 improve the solution quality by up to 36 times. 
 
 Relevant publications: 
-[1] [LNS for improving solution quality](https://jiaoyangli.me/publications/LiIJCAI21),
-[2] [LNS for increasing success rates](https://jiaoyangli.me/publications/LiAAAI22),
-[3] [LNS for railway planning and replanning](https://jiaoyangli.me/publications/ICAPS21),
-[4] [machine learning guided LNS for MAPF](https://jiaoyangli.me/publications/HuangAAAI22), and
-[5] [LNS for multi-agent task and path planning](https://jiaoyangli.me/publications/XuIROS22).
+[1] [LNS for improving solution quality](/publications/LiIJCAI21),
+[2] [LNS for increasing success rates](/publications/LiAAAI22),
+[3] [LNS for railway planning and replanning](/publications/ICAPS21),
+[4] [machine learning guided LNS for MAPF](/publications/HuangAAAI22), and
+[5] [LNS for multi-agent task and path planning](/publications/XuIROS22).
 
 ## Learning-Guided Planning
 Machine Learning (ML) can complement the search algorithms and boost their performance 

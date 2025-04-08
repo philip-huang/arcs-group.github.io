@@ -1,70 +1,42 @@
 
 <h2 class="page__title">{{pub.title}}</h2>
 
-{% if pub.award %}
-    <p>(<b>{{pub.award}}</b>)</p>
-{% endif %}
+<div class="pub-content">
+    {% if pub.award %}
+        <p>(<b>{{pub.award}}</b>)</p>
+    {% endif %}
 
-<p>
-    {% for author in pub.authors %}
-        {{ author }}{% if pub.equal_contributions contains author %}*{% endif %}{% if forloop.last %}. {% else %}, {% endif %}
-    {% endfor %}
-    <br>
-    <i>{{site.data.venues[pub.venue].name | default: pub.venue}}{% if site.data.venues[pub.venue].short_name %} (<b>{{site.data.venues[pub.venue].short_name}}</b>){% endif %}</i>,
-    {% if pub.volume %}
-        volume {{pub.volume}},
-    {% endif %}
-    {% if pub.number %}
-        number {{pub.number}},
-    {% endif %}
-    {% if pub.pages %}
-        pages {{pub.pages}},
-    {% endif %}
-    {{pub.year}}.
-    <br>
-    {% if pub.short_version %}
-        A <a href="{{ pub.short_version.url }}">short version</a> appeared at <i>{{site.data.venues[pub.short_version.venue].name}} (<b>{{site.data.venues[pub.short_version.venue].short_name}}</b>)</i>,
-        {% if pub.short_version.pages %}
-            pages {{pub.short_version.pages}},
+    <p class="pub-meta">
+        {% for author in pub.authors %}
+            {{ author }}{% if pub.equal_contributions contains author %}*{% endif %}{% if forloop.last %}. {% else %}, {% endif %}
+        {% endfor %}
+        <br>
+        <i>{{site.data.venues[pub.venue].name | default: pub.venue}}{% if site.data.venues[pub.venue].short_name %} (<b>{{site.data.venues[pub.venue].short_name}}</b>){% endif %}</i>,
+        {% if pub.volume %}
+            volume {{pub.volume}},
         {% endif %}
-        {{pub.short_version.year}}.
-    {% endif %}
-    <br>
-    [<a href="javascript:void(0)" onclick="(function(target, id) { if ($('#' + id).css('display') == 'block') { $('#' + id).hide('fast'); $(target).text('bibtex') } else { $('#' + id).show('fast'); $(target).text('bibtex▲') } })(this, 'bibtex-{{pub.key}}');">bibtex</a>]
-    {% if pub.doi %}
-        [<a href="https://doi.org/{{ pub.doi }}">publisher</a>]
-    {% elsif pub.url %}
-        [<a href="{{ pub.url }}">publisher</a>]
-    {% endif %}
-    {% for link in pub.links %}
-        {% if link[1] %}
-            [<a href="{{link[1]}}">{{link[0]}}</a>]
+        {% if pub.number %}
+            number {{pub.number}},
         {% endif %}
-    {% endfor %}
-</p>
-<div id="bibtex-{{pub.key}}" style="display:none; font-size:small">
-    {% if pub.bib %}
-        <pre>{{pub.bib}}</pre>
-    {% elsif site.data.venues[pub.venue].type=="conference" %}
-        <pre>@inproceedings{ {{pub.key}},
-  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
-  title     = "{{pub.title}}",
-  booktitle = "Proceedings of the {{ site.data.venues[pub.venue].name | default: pub.venue}} {% if site.data.venues[pub.venue].short_name %}({{site.data.venues[pub.venue].short_name}}){% endif %}",
-  pages     = "{{ pub.pages | default: '' }}",
-  year      = "{{ pub.year }}",
-  doi       = "{{ pub.doi | default: '' }}",
-}</pre>
-    {% elsif site.data.venues[pub.venue].type=="journal" %}
-        <pre>@article{ {{pub.key}},
-  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
-  title     = "{{pub.title}}",
-  journal   = "{{ site.data.venues[pub.venue].name | default: pub.venue}}",
-  volume    = "{{ pub.volume | default: '' }}",
-  number    = "{{ pub.number | default: '' }}",
-  pages     = "{{ pub.pages | default: '' }}",
-  year      = "{{ pub.year }}",
-  doi       = "{{ pub.doi | default: '' }}",
-}</pre>
-    {% endif %}
+        {% if pub.pages %}
+            pages {{pub.pages}},
+        {% endif %}
+        {{pub.year}}.
+        <br>
+        {% if pub.short_version %}
+            A <a href="{{ pub.short_version.url }}">short version</a> appeared at <i>{{site.data.venues[pub.short_version.venue].name}} (<b>{{site.data.venues[pub.short_version.venue].short_name}}</b>)</i>,
+            {% if pub.short_version.pages %}
+                pages {{pub.short_version.pages}},
+            {% endif %}
+            {{pub.short_version.year}}.
+        {% endif %}
+        <br>
+        {% include pub-buttons.html %}
+    </p>
+
+    <p>
+        {% if pub.abstract %}
+            <b>Abstract:</b> {{ pub.abstract }}
+        {% endif %}
+    </p>
 </div>
-

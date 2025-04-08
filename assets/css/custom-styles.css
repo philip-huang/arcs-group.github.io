@@ -1,0 +1,134 @@
+---
+layout: null
+---
+
+/* for carousel */
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  position: absolute;
+  width: 100%;
+  display: block !important;
+}
+.carousel-item.active {
+  opacity: 1;
+  position: relative;
+}
+.carousel-inner {
+  overflow: hidden;
+}
+/* Manual override classes */
+.caption-dark { color: #111 !important; text-shadow: 0 1px 3px rgba(255,255,255,0.8) !important; }
+.caption-light { color: #fff !important; text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important; }
+
+/* Publications Layout */
+.pub-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+}
+
+.pub-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.pub-thumbnail {
+  flex: 0 0 120px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 auto;
+    max-width: 120px;
+  }
+}
+
+.pub-content {
+  flex: 1;
+
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+  }
+
+  .pub-authors {
+    color: #555;
+    margin: 0 0 5px 0;
+  }
+
+  .pub-meta {
+    color: #666;
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+  }
+
+  .pub-abstract {
+    color: #444;
+    margin: 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .pub-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* BibTeX Button */
+.pub-button {
+  border-radius: 13px; /* Half of height for perfect capsule */
+  padding: 8px 16px;
+  min-width: 80px;
+  height: 26px;
+  background-color: #f8f9fa !important; /* Scholarly gray */
+  border: 1px solid #000000 !important;
+
+  &:hover {
+    background-color: #e0e0e0 !important;
+    transform: none !important; /* Remove lift effect */
+  }
+}
+
+/* BibTeX Content Box */
+.bibtex-content {
+  pre {
+    font-size: 0.75rem;
+    border-left: 3px solid #6c757d;
+    code {
+      white-space: pre-wrap;
+      font-family: "Courier New", monospace;
+    }
+    a {
+      color: #1a5276;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<a href="#bibtex-{{pub.key}}"
+           class="pub-link pub-button"
+           data-bs-toggle="collapse"
+           aria-expanded="false"
+           aria-controls="bibtex-{{pub.key}}"> BibTeX
+</a>
+
+{% if pub.doi %}
+    <a href="https://doi.org/{{ pub.doi }}"
+        class="pub-link pub-button">Publisher</a>
+{% elsif pub.url %}
+    <a href="{{ pub.url }}"
+        class="pub-link pub-button">Publisher</a>
+{% endif %}
+
+{% for link in pub.links %}
+    {% if link[1] %}
+        <a href="{{link[1]}}"
+            class="pub-link pub-button">{{link[0]}}</a>
+    {% endif %}
+{% endfor %}
+<div id="bibtex-{{pub.key}}" class="collapse bibtex-content">
+    {% if pub.bib %}
+        <pre>{{pub.bib}}</pre>
+    {% elsif site.data.venues[pub.venue].type=="conference" %}
+        <pre class="mt-2 p-3 rounded bg-light"><code>@inproceedings{ {{pub.key}},
+  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
+  title     = "{{pub.title}}",
+  booktitle = "Proceedings of the {{ site.data.venues[pub.venue].name | default: pub.venue}} {% if site.data.venues[pub.venue].short_name %}({{site.data.venues[pub.venue].short_name}}){% endif %}",
+  pages     = "{{ pub.pages | default: '' }}",
+  year      = "{{ pub.year }}",
+  doi       = "{{ pub.doi | default: '' }}",
+}</code></pre>
+    {% elsif site.data.venues[pub.venue].type=="journal" %}
+        <pre class="mt-2 p-3 rounded bg-light"><code>@article{ {{pub.key}},
+  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
+  title     = "{{pub.title}}",
+  journal   = "{{ site.data.venues[pub.venue].name | default: pub.venue}}",
+  volume    = "{{ pub.volume | default: '' }}",
+  number    = "{{ pub.number | default: '' }}",
+  pages     = "{{ pub.pages | default: '' }}",
+  year      = "{{ pub.year }}",
+  doi       = "{{ pub.doi | default: '' }}",
+}</code></pre>
+    {% elsif site.data.venues[pub.venue].type=="arXiv" %}
+        <pre class="mt-2 p-3 rounded bg-light"><code>@misc{ {{pub.key}},
+  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
+  title     = "{{pub.title}}",
+  publisher   = "{{ site.data.venues[pub.venue].name | default: pub.venue}}",
+  year      = "{{ pub.year }}",
+  doi       = "{{ pub.doi | default: '' }}",
+}</code></pre>
+    {% endif %}
+</div>

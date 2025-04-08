@@ -1,92 +1,32 @@
 <div class="pub-item">
-<!-- Left Column - Thumbnail -->
-<div class="pub-thumbnail">
-  <a href="{{ pub.link }}">
-    <img src="{{ pub.thumbnail | default: '/assets/img/robot-red.png' }}"
-         alt="{{ pub.title }} thumbnail">
-  </a>
-</div>
+    <!-- Left Column - Thumbnail -->
+    <div class="pub-thumbnail">
+      <a href="{{ pub.link }}">
+        <img src="{{ pub.thumbnail | default: '/assets/img/robot-red.png' }}"
+             alt="{{ pub.title }} thumbnail">
+      </a>
+    </div>
 
-<!-- Right Column - Details -->
-<div class="pub-content">
-    {% if pub.site %}
-        <a href="{{pub.site}}">{{pub.title}}</a>.
-    {% else %}
-        <a href="/publications/{{pub.key}}">{{pub.title}}</a>.
-    {% endif %}
-    {% if pub.award %}
-        (<b>{{pub.award}}</b>)
-    {% endif %}
-    <br/>
-    {% for author in pub.authors %}
-        {% if highlighted_names contains author %}<b>{{ author }}</b>{% else %}{{ author }}{% endif %}{% if pub.equal_contributions contains author %}*{% endif %}{% if forloop.last %}. {% else %}, {% endif %}
-    {% endfor %}
-    <br/>
-    <i>{{site.data.venues[pub.venue].name | default: pub.venue}}{% if site.data.venues[pub.venue].short_name %} (<b>{{site.data.venues[pub.venue].short_name}}</b>){% endif %}</i>,
-    {% if pub.volume %}
-        volume {{pub.volume}},
-    {% endif %}
-    {% if pub.number %}
-        number {{pub.number}},
-    {% endif %}
-    {% if pub.pages %}
-        pages {{pub.pages}},
-    {% endif %}
-    {{pub.year}}.
-    <br/>
-    {% if pub.short_version %}
-        A <a href="{{ pub.short_version.url }}">short version</a> appeared at <i>{{site.data.venues[pub.short_version.venue].name}} (<b>{{site.data.venues[pub.short_version.venue].short_name}}</b>)</i>,
-        {% if pub.short_version.pages %}
-            pages {{pub.short_version.pages}},
-        {% endif %}
-        {{pub.short_version.year}}.
-        <br/>
-    {% endif %}
-    {% if display_links=="true" %}
-        [<a href="javascript:void(0)" onclick="(function(target, id) { if ($('#' + id).css('display') == 'block') { $('#' + id).hide('fast'); $(target).text('bibtex') } else { $('#' + id).show('fast'); $(target).text('bibtex▲') } })(this, 'bibtex-{{pub.key}}');">bibtex</a>]
-        {% if pub.doi %}
-            [<a href="https://doi.org/{{ pub.doi }}">publisher</a>]
-        {% elsif pub.url %}
-            [<a href="{{ pub.url }}">publisher</a>]
-        {% endif %}
-        {% for link in pub.links %}
-            {% if link[1] %}
-                [<a href="{{link[1]}}">{{link[0]}}</a>]
+    <!-- Right Column - Details -->
+    <div class="pub-content">
+        <h3>
+            {% if pub.site %}
+                <a href="{{pub.site}}">{{pub.title}}</a>.
+            {% else %}
+                <a href="/publications/{{pub.key}}">{{pub.title}}</a>.
             {% endif %}
-        {% endfor %}
-        <div id="bibtex-{{pub.key}}" style="display:none; font-size:small">
-            {% if pub.bib %}
-                <pre>{{pub.bib}}</pre>
-            {% elsif site.data.venues[pub.venue].type=="conference" %}
-                <pre>@inproceedings{ {{pub.key}},
-  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
-  title     = "{{pub.title}}",
-  booktitle = "Proceedings of the {{ site.data.venues[pub.venue].name | default: pub.venue}} {% if site.data.venues[pub.venue].short_name %}({{site.data.venues[pub.venue].short_name}}){% endif %}",
-  pages     = "{{ pub.pages | default: '' }}",
-  year      = "{{ pub.year }}",
-  doi       = "{{ pub.doi | default: '' }}",
-}</pre>
-            {% elsif site.data.venues[pub.venue].type=="journal" %}
-                <pre>@article{ {{pub.key}},
-  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
-  title     = "{{pub.title}}",
-  journal   = "{{ site.data.venues[pub.venue].name | default: pub.venue}}",
-  volume    = "{{ pub.volume | default: '' }}",
-  number    = "{{ pub.number | default: '' }}",
-  pages     = "{{ pub.pages | default: '' }}",
-  year      = "{{ pub.year }}",
-  doi       = "{{ pub.doi | default: '' }}",
-}</pre>
-            {% elsif site.data.venues[pub.venue].type=="arXiv" %}
-                <pre>@misc{ {{pub.key}},
-  author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
-  title     = "{{pub.title}}",
-  publisher   = "{{ site.data.venues[pub.venue].name | default: pub.venue}}",
-  year      = "{{ pub.year }}",
-  doi       = "{{ pub.doi | default: '' }}",
-}</pre>
+            {% if pub.award %}
+                (<b>{{pub.award}}</b>)
             {% endif %}
-        </div>
-    {% endif %}
-</div>
+        </h3>
+        <p class="pub-authors">
+            {% for author in pub.authors %}
+                {% if highlighted_names contains author %}<b>{{ author }}</b>{% else %}{{ author }}{% endif %}{% if pub.equal_contributions contains author %}*{% endif %}{% if forloop.last %}. {% else %}, {% endif %}
+            {% endfor %}
+        </p>
+        {% include pub-meta.html %}
+        {% if display_links=="true" %}
+            {% include pub-buttons.html %}
+        {% endif %}
+    </div>
 </div>

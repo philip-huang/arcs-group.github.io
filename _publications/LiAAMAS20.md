@@ -16,8 +16,8 @@ author_profile: true
 {% include pub-page.html %} 
      
 <p style="text-align:center;">
-    <img src="/images/formation-random-4x.gif" style="max-height:150pt" alt="formation-random"/>
-    <img src="/images/formation-tight-4x.gif" style="max-height:150pt" alt="formation-tight"/>
-    <img src="/images/formation-wide-4x.gif" style="max-height:150pt" alt="formation-wide"/>
+    <img src="/files/jiaoyangli/images/formation-random-4x.gif" style="max-height:150pt" alt="formation-random"/>
+    <img src="/files/jiaoyangli/images/formation-tight-4x.gif" style="max-height:150pt" alt="formation-tight"/>
+    <img src="/files/jiaoyangli/images/formation-wide-4x.gif" style="max-height:150pt" alt="formation-wide"/>
 </p>
          

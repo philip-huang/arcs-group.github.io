@@ -11,12 +11,12 @@ permalink: /research/
 Our research focuses on developing fundamental algorithms that enable large teams of autonomous agents
 to accomplish collaborative tasks intelligently in dynamic environments.
 
-A summary of our ongoing research can be found [here](/pdfs/ARCS-2024-Orientation-Poster.pdf) \[updated: August 2024\].
+A summary of our ongoing research can be found [here](/files/jiaoyangli/ARCS-2024-Orientation-Poster.pdf) \[updated: August 2024\].
 
 ---------------------
 
 ### Multi-Agent Path Finding (MAPF)
-<img src="/images/mapf-demo.gif" style="float:right;width:150pt;padding-left:10px;"/>
+<img src="/files/jiaoyangli/images/mapf-demo.gif" style="float:right;width:150pt;padding-left:10px;"/>
 We aim to develop principled algorithms to solve challenging MAPF instances 
 via a variety of AI and optimization technologies, such as
 constraint reasoning, heuristic search, stochastic local search, and machine learning.
@@ -34,10 +34,13 @@ constraint reasoning, heuristic search, stochastic local search, and machine lea
     </ul>
 </details>
 
+<br>
+<br>
+
 ---------------------
 
 ### Coordination of Large Robot Teams in Automated Warehouses
-<img src="/images/warehouse-5x.gif" style="float:right;width:200pt;padding-left:10px;"/>
+<img src="/files/jiaoyangli/images/warehouse-5x.gif" style="float:right;width:200pt;padding-left:10px;"/>
 We aim to combine task planning, path planning, and execution 
 to coordinate thousands of mobile robots to fulfill delivery tasks in automated warehouses.
 
@@ -53,10 +56,13 @@ to coordinate thousands of mobile robots to fulfill delivery tasks in automated 
     </ul>
 </details>
 
+<br>
+<br>
+
 ---------------------
 
 ### Multi-Robotic-Arm Cooperative Manipulation
-<img src="/images/bar.gif" style="float:right;width:150pt;padding-left:10px;"/>
+<img src="/files/jiaoyangli/images/bar.gif" style="float:right;width:150pt;padding-left:10px;"/>
 We aim to develop combined task planning, motion planning, and execution frameworks
 to jointly plan safe, low-cost plans
 for a team of robotic arms to perform cooperative manipulation and assembly. 
@@ -74,10 +80,13 @@ for a team of robotic arms to perform cooperative manipulation and assembly.
     </ul>
 </details>
 
+<br>
+<br>
+
 ---------------------
 
 ### Intelligent Traffic Management
-<img src="/images/flatland.gif" style="float:right;width:200pt;padding-left:10px;"/>
+<img src="/files/jiaoyangli/images/flatland.gif" style="float:right;width:200pt;padding-left:10px;"/>
 We aim to develop intelligent planning systems to coordinate
 trains, airplanes, autonomous vehicle, etc. on complex road networks under uncertainty.
 

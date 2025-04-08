@@ -9,13 +9,13 @@ permalink: /warehouse/
 <div style="display: flex; flex-wrap: wrap; text-align: center">
     <div style="min-width:300px;flex: 1;margin: 5px;">
         <video width="300px" autoplay loop controls> 
-            <source type="video/mp4" src="https://jiaoyangli.me/images/Single+_800agents-8x.mp4" /> 
+            <source type="video/mp4" src="/files/jiaoyangli/images/Single+_800agents-8x.mp4" /> 
         </video>
         <figcaption>Traditional single-agent solver for automated warehouses</figcaption>
     </div>
     <div style="min-width:300px;flex: 1;margin: 5px;">
         <video width="300px" autoplay loop controls> 
-            <source type="video/mp4" src="https://jiaoyangli.me/images/PBS_w=10_800agents-8x.mp4" /> 
+            <source type="video/mp4" src="/files/jiaoyangli/images/PBS_w=10_800agents-8x.mp4" /> 
         </video>
         <figcaption>Our MAPF solver for automated warehouses</figcaption>
     </div>
@@ -26,7 +26,7 @@ Today, in automated warehouses,
 mobile robots already autonomously move inventory pods or flat packages from one location to another. 
 Finding low-cost paths for the robots in real-time is essential for the effectiveness of such systems. 
 Multi-Agent Path Finding (MAPF) technologies
-(see more details in our research on <a href="https://jiaoyangli.me/research/mapf/">Foundations of MAPF</a>)
+(see more details in our research on <a href="/mapf/">Foundations of MAPF</a>)
 provide a promising solution for coordinating these robots.
 However, to apply MAPF in this scenario, we need to address four challenges, namely 
 how to assign tasks to agents, 
@@ -44,19 +44,19 @@ We develop various of combined task and path planning algorithms with different 
 (e.g., optimal, complete, capable of handling time-window constraints, etc.) that suit for different scenarios.
 
 Relevant publications: 
-[1] [Decoupled online task assignment and path planning](https://jiaoyangli.me/publications/MaAAMAS17), 
-[2] [Decoupled offline task assignment and path planning](https://jiaoyangli.me/publications/LiuAAMAS19), 
-[3] [CBS-based optimal task and path planning](https://jiaoyangli.me/publications/ZhongICRA22), 
-[4] [LNS-based task and path planning](https://jiaoyangli.me/publications/XuIROS22),
-[5] [Deadline-aware task and path planning](https://jiaoyangli.me/publications/HuangHSI22), and
+[1] [Decoupled online task assignment and path planning](/publications/MaAAMAS17), 
+[2] [Decoupled offline task assignment and path planning](/publications/LiuAAMAS19), 
+[3] [CBS-based optimal task and path planning](/publications/ZhongICRA22), 
+[4] [LNS-based task and path planning](/publications/XuIROS22),
+[5] [Deadline-aware task and path planning](/publications/HuangHSI22), and
 [6] [column generation for tasks with time windows](https://arxiv.org/abs/2103.08835 "Preprint 2021").
 
 
 ## Scalability and Solution Quality
 
-<img src="https://jiaoyangli.me/images/single-vs-mapf.png" style="float:left;width:250pt;padding:10px;"  alt="Single vs MAPF"/>
+<img src="/files/jiaoyangli/images/single-vs-mapf.png" style="float:left;width:250pt;padding:10px;"  alt="Single vs MAPF"/>
 The principled way of solving this challenge is to develop more efficient and effective MAPF algorithms. 
-More details can be found in our research on [Foundations of MAPF](https://jiaoyangli.me/research/mapf/).
+More details can be found in our research on [Foundations of MAPF](/mapf/).
 
 Additionally, MAPF is only the “one-shot” variant of the actual problem in the automated warehouses. 
 Typically, after an agent reaches its goal location, it does not stop and wait there forever, 
@@ -77,13 +77,13 @@ A follow-up work [3] further improved the planner through imitation learning.
 <div style="display: flex; flex-wrap: wrap; text-align: center">
     <div style="min-height:200px;flex: 1;margin: 5px;">
         <video height="200px" autoplay loop controls> 
-            <source type="video/mp4" src="/images/random-800agents.mp4" /> 
+            <source type="video/mp4" src="/files/jiaoyangli/images/random-800agents.mp4" /> 
         </video>
         <figcaption>800 agents on a 32x32 map with 819 empty cells</figcaption>
     </div>
     <div style="min-height:200px;flex: 1;margin: 5px;">
         <video height="200px" autoplay loop controls> 
-            <source type="video/mp4" src="/images/warehouse-10kagents.mp4" /> 
+            <source type="video/mp4" src="/files/jiaoyangli/images/warehouse-10kagents.mp4" /> 
         </video>
         <figcaption>10,000 agents on a 180x320 warehouse map</figcaption>
     </div>
@@ -99,7 +99,7 @@ Relevant publications:
 
 ## Combined Planning and Execution
 
-<img src="https://jiaoyangli.me/images/warehouse-5x.gif" style="float:left;width:200pt;padding:10px;"  alt="warehouse"/>
+<img src="/files/jiaoyangli/images/warehouse-5x.gif" style="float:left;width:200pt;padding:10px;"  alt="warehouse"/>
 MAPF algorithms can find high-quality collision-free paths for automated warehousing 
 under simplified assumptions about the robot dynamics. 
 However, these simplifying assumptions pose challenging implementational issues 

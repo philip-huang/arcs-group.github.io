@@ -7,15 +7,15 @@ permalink: /traffic/
 <h1>Intelligent Traffic Management</h1>
 
 <div id="wrapper" style="float: left; width: 25%; padding: 10px; text-align: center"> 
-    <img src="https://jiaoyangli.me/images/PSL-crosswalk-loop.gif" alt="aim" style="max-height:150pt;" />
+    <img src="/files/jiaoyangli/images/PSL-crosswalk-loop.gif" alt="aim" style="max-height:150pt;" />
     <figcaption>Autonomous Intersection Management</figcaption>
 </div>
 <div id="wrapper" style="float: left; width: 34.8%; padding: 10px; text-align: center"> 
-    <img src="https://jiaoyangli.me/images/flatland.gif" alt="flatland" style="max-height:150pt;" />
+    <img src="/files/jiaoyangli/images/flatland.gif" alt="flatland" style="max-height:150pt;" />
     <figcaption>Rail planning and replanning</figcaption>
 </div>
 <div id="wrapper" style="float: left; width: 40.2%; padding: 10px; text-align: center">
-    <img src="https://jiaoyangli.me/images/airport-2x.gif" alt="airport" style="max-height:150pt;" />
+    <img src="/files/jiaoyangli/images/airport-2x.gif" alt="airport" style="max-height:150pt;" />
     <figcaption>Airport surface coordination</figcaption>
 </div>
 <div style="clear:both;"></div>
@@ -44,10 +44,10 @@ deliver deadlock-free actions **in real-time** during execution that are robust 
 </iframe>
 
 Relevant publications: 
-[1] [railway planing and replanning](https://jiaoyangli.me/publications/LiICAPS21) (**winner of the NeurIPS'20 Flatland Challenge**),
-[2] [railway planing and replanning with MAPF and MARL](https://jiaoyangli.me/publications/Laurent21), and
-[3] [airport taxiway planning](https://jiaoyangli.me/publications/LiAIAA19).         
-[4] [intersection coordination for autonomous vehicles](https://jiaoyangli.me/publications/LiAAAI23/)
+[1] [railway planing and replanning](/publications/LiICAPS21) (**winner of the NeurIPS'20 Flatland Challenge**),
+[2] [railway planing and replanning with MAPF and MARL](/publications/Laurent21), and
+[3] [airport taxiway planning](/publications/LiAIAA19).         
+[4] [intersection coordination for autonomous vehicles](/publications/LiAAAI23/)
 
 <div style="float: right;">
     <button onclick="location.href='/research'" type="button">Back to the Research page</button>

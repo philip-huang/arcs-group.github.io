@@ -17,6 +17,6 @@ author_profile: true
 
 <div style="text-align: center"> 
     <video style="max-width:500px" controls> 
-        <source type="video/mp4" src="/images/S2M2-demo.mp4" /> 
+        <source type="video/mp4" src="/files/jiaoyangli/images/S2M2-demo.mp4" /> 
     </video>
 </div>

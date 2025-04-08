@@ -1,0 +1,21 @@
+<p class="pub-meta">
+    <i>{{site.data.venues[pub.venue].name | default: pub.venue}}{% if site.data.venues[pub.venue].short_name %} (<b>{{site.data.venues[pub.venue].short_name}}</b>){% endif %}</i>,
+    {% if pub.volume %}
+        volume {{pub.volume}},
+    {% endif %}
+    {% if pub.number %}
+        number {{pub.number}},
+    {% endif %}
+    {% if pub.pages %}
+        pages {{pub.pages}},
+    {% endif %}
+    {{pub.year}}.
+    <br/>
+    {% if pub.short_version %}
+        A <a href="{{ pub.short_version.url }}">short version</a> appeared at <i>{{site.data.venues[pub.short_version.venue].name}} (<b>{{site.data.venues[pub.short_version.venue].short_name}}</b>)</i>,
+        {% if pub.short_version.pages %}
+            pages {{pub.short_version.pages}},
+        {% endif %}
+        {{pub.short_version.year}}.
+    {% endif %}
+</p>

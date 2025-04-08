@@ -1,7 +1,6 @@
 ---
 layout: publication
 permalink: /publications/ChenAAAI21robust/
-author_profile: true
 ---
 {% assign pub_key = "ChenAAAI21robust" %}
 
