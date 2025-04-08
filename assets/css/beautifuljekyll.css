@@ -1257,3 +1257,41 @@ pre {
     }
   }
 }
+
+/* Container for right alignment */
+.return-top-container {
+  text-align: right;  /* Desktop alignment */
+  margin: 2rem 0;
+
+  @media (max-width: 768px) {
+    text-align: center; /* Center on mobile */
+  }
+}
+
+/* Return to Top Button */
+.btn-return-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f5f7fa; /* Match your theme */
+  color: #4a5568 !important;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 2rem auto;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #edf2f7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  i {
+    font-size: 0.9em;
+  }
+}

@@ -19,7 +19,7 @@ permalink: /publications/
     {% for year in years %}
         <a href="#year{{ year }}">{{ year }}</a> |
     {% endfor %}
-    <a href="#preprints">Preprints</a>
+<!--    <a href="#preprints">Preprints</a>-->
 </p>
 
 {% for year in years %}
@@ -31,14 +31,20 @@ permalink: /publications/
             {% endif %}
         {% endfor %}
     </div>
+    <!-- Return to Top Button -->
+    <div class="return-top-container">
+      <a href="#top" class="btn-return-top" aria-label="Return to top">
+        <i class="fas fa-arrow-up"></i> Back to Top
+      </a>
+    </div>
 {% endfor %}
 
-<h2>Preprints</h2><a id="preprints"></a>
-<div class="publications-container">
-    {% for pub in site.data.preprints %}
-        {% include pub-thumbnail.html %}
-    {% endfor %}
-</div>
+<!--<h2>Preprints</h2><a id="preprints"></a>-->
+<!--<div class="publications-container">-->
+<!--    {% for pub in site.data.preprints %}-->
+<!--        {% include pub-thumbnail.html %}-->
+<!--    {% endfor %}-->
+<!--</div>-->
 
 <!--<h2>Thesis</h2><a id="thesis"></a>-->
 <!--<ul>-->
