@@ -1,15 +1,20 @@
-# Making changes to the website
-1. ALL changes must be done through github via 
-   1. creating a fork, 
-   2. making modifications, and 
-   3. requesting a pull request.
-2. There are 2 ways to make modifcations:
-   1. *Locally*: develop and test on your local machine. See instructions [here](#set-up-and-develop-locally)
-   2. *Online*: make changes through the github page online. Simple editions, such as adding members or publications, can be done online.
+# ARCS Lab Website Contribution Guide
+1. ALL changes must be done using GitHub’s [fork-and-PR workflow](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo), i.e.,
+   1. create a fork, 
+   2. make modifications, and 
+   3. submit a pull request (PR). See instructions [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).
+2. There are 2 ways to make modifications:
+   1. *Locally*: develop and test on your local machine. See instructions [here](#set-up-and-develop-locally).
+   2. *Online*: make changes through the GitHub page online. Simple editions, such as adding members or publications, can be done online.
 3. Make changes!
 
 If you are a **new member**, create a new folder in `/files/` with your full name. 
 This folder will be used to store all your files.
+
+Some best practices:
+1. Sync your fork regularly.
+2. Keep PRs small (1 type of change per PR).
+3. Optimize images (<500KB, use .jpg for photos).
 
 ## Add/Edit Publications
 Add a publication to the [publications page](https://arcs-group.github.io/publications/):
@@ -17,57 +22,57 @@ Add a publication to the [publications page](https://arcs-group.github.io/public
 2. Edit `_data/pubs.yml`:
    - Copy the following template, paste it, and fill out the fields. Delete the rows that you don't need.
    - Check previous examples and try your best to be consistent.
-```yaml
-- key: null  # the unique id for the paper; please follow the naming rule of the other papers
-  title: null 
-  site: null  # link to the external project page
-  authors: []
-  equal_contributions: [] # authors with asterisks
-  venue: null # Please always use the name as defined in venues.yml
-              # If venues.yml does not contain the venue, add it to venues.yml first
-  volume: null
-  number: null
-  pages: null
-  year: null
-  thumbnail: null  # Save to /files/[your-folder]/
-  award: null
-  doi: null
-  tags: []  # Current tags for research areas: [mapf, warehouse, arm, traffic]
-            # See the research areas page for more details.
-  links: # You can add additional links not listed below if needed
-    arXiv: null
-    Code: null
-    Poster: null
-    Slides: null
-    Talk: null
-  short_version:
-    venue: null
-    year: null
-    pages: null
-    url: null
-  abstract: null
-```
+   ```yaml
+   - key: null  # the unique id for the paper; please follow the naming rule of the other papers
+     title: null 
+     site: null  # link to the external project page
+     authors: []
+     equal_contributions: [] # authors with asterisks
+     venue: null # Please always use the name as defined in venues.yml
+                 # If venues.yml does not contain the venue, add it to venues.yml first
+     volume: null
+     number: null
+     pages: null
+     year: null
+     thumbnail: null  # Save to /files/[your-folder]/
+     award: null
+     doi: null
+     tags: []  # Current tags for research areas: [mapf, warehouse, arm, traffic]
+               # See the research areas page for more details.
+     links: # You can add additional links not listed below if needed
+       arXiv: null
+       Code: null
+       Poster: null
+       Slides: null
+       Talk: null
+     short_version:
+       venue: null
+       year: null
+       pages: null
+       url: null
+     abstract: null
+   ```
 3. If you do not have a project page, use the following steps to create a simple one:
    1. Create a new file named `xxxxxx.md` (where *xxxxxx* is the key of the paper) in folder `/_publications/`.
-   2. Copy and paste the following code in the file, and change *xxxxxx* to the key of the paper (in two places). 
-   You can modify the page if you want, e.g., adding some media, etc. 
-```html
----
-layout: publication
-permalink: /publications/xxxxxx/
----
-{% assign pub_key = "xxxxxx" %}
-
-{% include base_path %}
-{% assign pub = null %}
-{% for p in site.data.pubs %}
-  {% if p.key == pub_key %}
-    {% assign pub = p %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-{% include pub-page.html %}
-```
+   2. Copy and paste the following code in the file, and change *xxxxxx* to the key of the paper (in two places).
+   ```html
+   ---
+   layout: publication
+   permalink: /publications/xxxxxx/
+   ---
+   {% assign pub_key = "xxxxxx" %}
+   
+   {% include base_path %}
+   {% assign pub = null %}
+   {% for p in site.data.pubs %}
+     {% if p.key == pub_key %}
+       {% assign pub = p %}
+       {% break %}
+     {% endif %}
+   {% endfor %}
+   {% include pub-page.html %}
+   ```
+   3. You can add more materials to the page if you want, e.g., adding some videos, etc. 
 
 ## Add/Edit Medias in Home Page
 Add a slide to the carousel in the [main page](https://arcs-group.github.io):
@@ -79,20 +84,20 @@ Add yourself to the [members page](https://arcs-group.github.io/members/):
 2. Edit `_data/people.yml`:
    - Copy the following template, paste it, and fill out the fields. 
    - Check previous examples and try your best to be consistent.
-```yaml
-- name: null
-  role: null  # select from [faculty, postdoc, phd, masters, undergrad, visitor, alumnus]
-  webpage: null
-  enrollment: null
-  headshot: /photos/members/yourname.jpg # change the file name accordingly
-  bio: null
-```
+   ```yaml
+   - name: null
+     role: null  # select from [faculty, postdoc, phd, masters, undergrad, visitor, alumnus]
+     webpage: null
+     enrollment: null
+     headshot: /photos/members/yourname.jpg # change the file name accordingly
+     bio: null
+   ```
 
 # Set up and develop Locally 
 
 1. Install Prerequisites
 
-You'll neeed to install:
+You'll need to install:
 - Ruby
 - Bundler
 - Jekyll
@@ -135,6 +140,27 @@ bundle exec jekyll serve --livereload
 
 You can then go to http://localhost:4000 and should see the cite running locally!
 
+
+# File Structure
+
+```bash
+arcs-group.github.io/  
+├── _data/                  # Editable content  
+│   ├── people.yml          # Lab member profiles  
+│   ├── pubs.yml            # Papers shown on the publication page 
+│   ├── carousel.yml        # Slides shown on the home page
+│   └── venues.yml          # List of conferences and journals used by the papers
+├── files/                  # Files for each member
+├── photos/ 
+│   ├── lab/                # Lab photos
+│   └── members/            # Headshots for lab members
+├── _config.yml             # Site-wide settings  
+├── index.html              # Home page
+└── _pages/                 
+    ├── members.html        # Lab member page   
+    ├── research.md         # Research area page      
+    └── publictaion.html    # Publication page
+```
 
 # Credit to the template: Beautiful Jekyll
 
