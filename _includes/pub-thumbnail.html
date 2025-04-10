@@ -1,7 +1,13 @@
+{% if pub.site %}
+  {% assign pub_link = pub.site %}
+{% else %}
+  {% assign pub_link = "/publications/" | append: pub.key %}
+{% endif %}
+
 <div class="pub-item">
     <!-- Left Column - Thumbnail -->
     <div class="pub-thumbnail">
-      <a href="{{ pub.link }}">
+      <a href="{{ pub_link }}">
         <img src="{{ pub.thumbnail | default: '/assets/img/robot-red.png' }}"
              alt="{{ pub.title }} thumbnail">
       </a>
@@ -10,11 +16,7 @@
     <!-- Right Column - Details -->
     <div class="pub-content">
         <h3>
-            {% if pub.site %}
-                <a href="{{pub.site}}">{{pub.title}}</a>.
-            {% else %}
-                <a href="/publications/{{pub.key}}">{{pub.title}}</a>.
-            {% endif %}
+            <a href="{{ pub_link }}">{{pub.title}}</a>.
             {% if pub.award %}
                 (<b>{{pub.award}}</b>)
             {% endif %}
