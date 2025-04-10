@@ -1,6 +1,6 @@
 # Making changes to the website
 1. ALL changes must be done through github via 
-   1. creating a new branch, 
+   1. creating a fork, 
    2. making modifications, and 
    3. requesting a pull request.
 2. There are 2 ways to make modifcations:
