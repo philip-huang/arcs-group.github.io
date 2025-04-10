@@ -27,8 +27,14 @@
             {% endfor %}
         </p>
         {% include pub-meta.html %}
-        {% if display_links=="true" %}
-            {% include pub-buttons.html %}
+        {% if pub.abstract %}
+            <a href="#abstract-{{pub.key}}"
+                       class="pub-link pub-button"
+                       data-bs-toggle="collapse"
+                       aria-expanded="false"
+                       aria-controls="abstract-{{pub.key}}"> Abstract
+            </a>
         {% endif %}
+        {% include pub-buttons.html %}
     </div>
 </div>

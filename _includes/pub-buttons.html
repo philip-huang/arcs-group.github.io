@@ -19,6 +19,9 @@
             class="pub-link pub-button">{{link[0]}}</a>
     {% endif %}
 {% endfor %}
+<div id="abstract-{{pub.key}}" class="collapse abstract-content">
+    {{ pub.abstract | markdownify }}
+</div>
 <div id="bibtex-{{pub.key}}" class="collapse bibtex-content">
     {% if pub.bib %}
         <pre>{{pub.bib}}</pre>
