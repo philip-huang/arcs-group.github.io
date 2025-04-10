@@ -5,7 +5,7 @@
 #  caption_style: "light"  # White text for dark backgrounds or
 #  caption_style: "dark"   # Dark text for light backgrounds
 
-- image: "/photos/lab/group_03242024.jpg"
+- image: "/photos/lab/group_03242024.jpeg"
   alt: "Team Photo"
   title: "Welcome to ARCS Lab"
   caption_style: "light"  # White text for dark backgrounds
