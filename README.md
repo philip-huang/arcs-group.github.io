@@ -53,7 +53,7 @@ Add a publication to the [publications page](https://arcs-group.github.io/public
      abstract: null
    ```
 3. If you do not have a project page, use the following steps to create a simple one:
-   1. Create a new file named `xxxxxx.md` (where *xxxxxx* is the key of the paper) in folder `/_publications/`.
+   1. Create a new file named `xxxxxx.md` (where *xxxxxx* is the key of the paper you defined in `_data/pubs.yml`) in folder `/_publications/`.
    2. Copy and paste the following code in the file, and change *xxxxxx* to the key of the paper (in two places).
    ```html
    ---
