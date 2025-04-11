@@ -5,11 +5,11 @@
            aria-controls="bibtex-{{pub.key}}"> BibTeX
 </a>
 
-{% if pub.doi %}
-    <a href="https://doi.org/{{ pub.doi }}"
+{% if pub.publisher %}
+    <a href="{{ pub.publisher }}"
         class="pub-link pub-button">Publisher</a>
-{% elsif pub.url %}
-    <a href="{{ pub.url }}"
+{% elsif pub.doi %}
+    <a href="https://doi.org/{{ pub.doi }}"
         class="pub-link pub-button">Publisher</a>
 {% endif %}
 
@@ -49,9 +49,8 @@
         <pre class="mt-2 p-3 rounded bg-light"><code>@misc{ {{pub.key}},
   author    = "{% for author in pub.authors %}{{ author }}{% if forloop.last == false %} and {% endif %}{% endfor %}",
   title     = "{{pub.title}}",
-  publisher   = "{{ site.data.venues[pub.venue].name | default: pub.venue}}",
   year      = "{{ pub.year }}",
-  doi       = "{{ pub.doi | default: '' }}",
+  eprint       = "{{ pub.eprint | default: '' }}",
 }</code></pre>
     {% endif %}
 </div>

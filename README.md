@@ -17,17 +17,44 @@ Some best practices:
 3. Optimize images (<500KB, use .jpg for photos).
 
 ## Add/Edit Publications
-Add a publication to the [publications page](https://arcs-group.github.io/publications/):
+### Add/Edit a preprint:
+Add an arXiv paper to the [publications page](https://arcs-group.github.io/publications/):
 1. Add relevant media to your folder in `/files/` if needed.
+2. Edit `_data/preprints.yml`:
+   - Copy the following template, paste it, and fill out the fields.
+   ```yaml
+   - key: null  # The unique id for the paper; please follow the naming rule of the other papers
+     title: null
+     site: null  # Link to the external project page if exists
+     authors: []
+     equal_contributions: []  # Authors with asterisks
+     venue: arXiv   # Do not change this
+     year: null
+     thumbnail: null  # Save to /files/[your-folder]/
+     eprint: null   # Example: arXiv:2203.02475 (copy from the "cited as" line on the arXiv page) 
+     tags: []  # Current tags for research areas: [mapf, warehouse, arm, traffic]
+               # See the research areas page for more details.
+     links:
+       arXiv: null
+     abstract: null
+   ```
+3. If you do not have a project page, follow the steps [here](#create-a-project-page) to create a simple one.
+
+### Add/Edit a published work:
+Add a publication to the [publications page](https://arcs-group.github.io/publications/):
+1. If this paper is included in the preprints:
+   1. Remove it from `_data/preprints.yml`.
+   2. If it has a project page in `/_publications/`, remove it as well.
+2. Add relevant media to your folder in `/files/` if needed.
 2. Edit `_data/pubs.yml`:
    - Copy the following template, paste it, and fill out the fields. Delete the rows that you don't need.
    - Check previous examples and try your best to be consistent.
    ```yaml
-   - key: null  # the unique id for the paper; please follow the naming rule of the other papers
+   - key: null  # The unique id for the paper; please follow the naming rule of the other papers
      title: null 
-     site: null  # link to the external project page
+     site: null  # Link to the external project page
      authors: []
-     equal_contributions: [] # authors with asterisks
+     equal_contributions: [] # Authors with asterisks
      venue: null # Please always use the name as defined in venues.yml
                  # If venues.yml does not contain the venue, add it to venues.yml first
      volume: null
@@ -36,10 +63,11 @@ Add a publication to the [publications page](https://arcs-group.github.io/public
      year: null
      thumbnail: null  # Save to /files/[your-folder]/
      award: null
-     doi: null
+     doi: null  # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+     publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi] 
      tags: []  # Current tags for research areas: [mapf, warehouse, arm, traffic]
                # See the research areas page for more details.
-     links: # You can add additional links not listed below if needed
+     links: # You can add additional links not listed below 
        arXiv: null
        Code: null
        Poster: null
@@ -52,8 +80,10 @@ Add a publication to the [publications page](https://arcs-group.github.io/public
        url: null
      abstract: null
    ```
-3. If you do not have a project page, use the following steps to create a simple one:
-   1. Create a new file named `xxxxxx.md` (where *xxxxxx* is the key of the paper you defined in `_data/pubs.yml`) in folder `/_publications/`.
+3. If you do not have a project page, follow the steps [here](#create-a-project-page) to create a simple one.
+
+### Create a project page
+   1. Create a new file named `xxxxxx.md` in folder `/_publications/`, where *xxxxxx* is the key of the paper you defined in `_data/pubs.yml` or `_data/preprints.yml`. 
    2. Copy and paste the following code in the file, and change *xxxxxx* to the key of the paper (in two places).
    ```html
    ---

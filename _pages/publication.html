@@ -22,6 +22,13 @@ permalink: /publications/
 <!--    <a href="#preprints">Preprints</a>-->
 </p>
 
+<h2>Preprints</h2>
+<div class="publications-container">
+    {% for pub in site.data.preprints %}
+        {% include pub-thumbnail.html %}
+    {% endfor %}
+</div>
+
 {% for year in years %}
     <h2>{{ year }}</h2><a id="year{{ year }}"></a>
     <div class="publications-container">
@@ -38,29 +45,3 @@ permalink: /publications/
       </a>
     </div>
 {% endfor %}
-
-<!--<h2>Preprints</h2><a id="preprints"></a>-->
-<!--<div class="publications-container">-->
-<!--    {% for pub in site.data.preprints %}-->
-<!--        {% include pub-thumbnail.html %}-->
-<!--    {% endfor %}-->
-<!--</div>-->
-
-<!--<h2>Thesis</h2><a id="thesis"></a>-->
-<!--<ul>-->
-<!--    <li>-->
-<!--        <a href="/publications/LiPhD22">Efficient and Effective Techniques for Large-Scale Multi-Agent Path Finding</a>.-->
-<!--        (<b>Best Dissertation Awards by ICAPS, AAMAS, and USC Viterbi School of Engineering</b>)<br/>-->
-<!--        <b>Jiaoyang Li</b>.<br/>-->
-<!--        <i>PhD thesis, Department of Computer Science, University of Southern California, Los Angeles (California)</i>, 2022.<br/>-->
-<!--        [<a href="javascript:void(0)" onclick="(function(target, id) { if ($('#' + id).css('display') == 'block') { $('#' + id).hide('fast'); $(target).text('bibtex') } else { $('#' + id).show('fast'); $(target).text('bibtex▲') } })(this, 'bibtex-LiPhD22');">bibtex</a>]-->
-<!--        [<a href="/files/phd-thesis-final.pdf">pdf</a>]-->
-<!--        <div id="bibtex-LiPhD22" style="display:none; font-size:small">-->
-<!--            <pre>@phdthesis{LiPhD22,-->
-<!--  title     = {Efficient and Effective Techniques for Large-Scale Multi-Agent Path Finding},-->
-<!--  author    = {Jiaoyang Li},-->
-<!--  school    = {University of Southern California},-->
-<!--  year      = {2022}-->
-<!--}</pre></div>-->
-<!--    </li>-->
-<!--</ul>-->

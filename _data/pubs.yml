@@ -11,10 +11,12 @@
 #  number: null
 #  pages: null
 #  year: null
+#  thumbnail: null  # Save to /files/[your-folder]/
 #  award: null
-#  doi: null
+#  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+#  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
 #  tags: [mapf, warehouse, arm, traffic]
-#  links:
+#  links:   # You can add additional links not listed below
 #    arXiv: null
 #    Code: null
 #    Poster: null
@@ -26,9 +28,6 @@
 #    pages: null
 #    url: null
 #  abstract: null
-
-# Current tags for research areas, see the research areas page for more details:
-# deform_obj_manip, 3D_afford_obj_manip, multimodal, rl_algs, auto_driving, active_perception, self_sup_rob
 
 ############### 2025 ##################
 
@@ -349,7 +348,7 @@
   venue: NeurIPS
   pages: 57212-57225
   year: 2023
-  url: https://papers.nips.cc/paper_files/paper/2023/hash/b2fbf1c9bc92e7ef2f6cab2e8a3e09af-Abstract-Conference.html
+  publisher: https://papers.nips.cc/paper_files/paper/2023/hash/b2fbf1c9bc92e7ef2f6cab2e8a3e09af-Abstract-Conference.html
   links:
     arXiv: https://arxiv.org/abs/2310.18622
     Code: https://github.com/lunjohnzhang/warehouse_env_gen_nca_public
@@ -539,7 +538,7 @@
   venue: AAMAS
   pages: 1464-1472
   year: 2022
-  url: https://dl.acm.org/doi/abs/10.5555/3535850.3536013
+  publisher: https://dl.acm.org/doi/abs/10.5555/3535850.3536013
   links:
     Code: https://github.com/HanZhang39/MAPF-PC
 
@@ -577,6 +576,17 @@
   year: 2022
   doi: 10.1609/aaai.v36i9.21162
 
+- key: Chen22
+  title: Cooperative Task and Motion Planning for Multi-Arm Assembly Systems
+  authors: [Jingkai Chen, Jiaoyang Li, Yijiang Huang, Caelan Garrett, Dawei Sun, Chuchu Fan, Andreas Hofmann, Caitlin Mueller, Sven Koenig, Brian C. Williams]
+  equal_contributions: [Jiaoyang Li, Yijiang Huang]
+  venue: arXiv
+  year: 2022
+  eprint: arXiv:2203.02475
+  thumbnail: /files/jiaoyangli/thumbnails/Chen22.gif
+  links:
+    arXiv: https://arxiv.org/abs/2203.02475
+  abstract: Multi-robot assembly systems are becoming increasingly appealing in manufacturing due to their ability to automatically, flexibly, and quickly construct desired structural designs. However, effectively planning for these systems in a manner that ensures each robot is simultaneously productive, and not idle, is challenging due to (1) the close proximity that the robots must operate in to manipulate the structure and (2) the inherent structural partial orderings on when each part can be installed. In this paper, we present a task and motion planning framework that jointly plans safe, low-makespan plans for a team of robots to assemble complex spatial structures. Our framework takes a hierarchical approach that, at the high level, uses Mixed-integer Linear Programs to compute an abstract plan comprised of an allocation of robots to tasks subject to precedence constraints and, at the low level, builds on a state-of-the-art algorithm for Multi-Agent Path Finding to plan collision-free robot motions that realize this abstract plan. Critical to our approach is the inclusion of certain collision constraints and movement durations during high-level planning, which better informs the search for abstract plans that are likely to be both feasible and low-makespan while keeping the search tractable. We demonstrate our planning system on several challenging assembly domains with several (sometimes heterogeneous) robots with grippers or suction plates for assembling structures with up to 23 objects involving Lego bricks, bars, plates, or irregularly shaped blocks.
 
 ############### 2021 ##################
 - key: LiAIJ21
@@ -712,7 +722,7 @@
   volume: 133
   pages: 275-301
   year: 2021
-  url: http://proceedings.mlr.press/v133/laurent21a.html
+  publisher: http://proceedings.mlr.press/v133/laurent21a.html
   tags: [traffic]
   bib: >
     @inproceedings{Laurent21,
@@ -724,6 +734,15 @@
       volume    = 	 {133},
       series    = 	 {Proceedings of Machine Learning Research},
     }
+
+- key: Haghani21
+  title: "Multi-Robot Routing with Time Windows: A Column Generation Approach"
+  authors: [Naveed Haghani, Jiaoyang Li, Sven Koenig, Gautam Kunapuli, Claudio Contardo, Amelia Regan, Julian Yarkony]
+  venue: arXiv
+  year: 2021
+  eprint: arXiv:2103.08835
+  thumbnail: /files/jiaoyangli/thumbnails/Haghani21.png
+  abstract: Robots performing tasks in warehouses provide the first example of wide-spread adoption of autonomous vehicles in transportation and logistics. The efficiency of these operations, which can vary widely in practice, are a key factor in the success of supply chains. In this work we consider the problem of coordinating a fleet of robots performing picking operations in a warehouse so as to maximize the net profit achieved within a time period while respecting problem- and robot-specific constraints. We formulate the problem as a weighted set packing problem where the elements in consideration are items on the warehouse floor that can be picked up and delivered within specified time windows. We enforce the constraint that robots must not collide, that each item is picked up and delivered by at most one robot, and that the number of robots active at any time does not exceed the total number available. Since the set of routes is exponential in the size of the input, we attack optimization of the resulting integer linear program using column generation, where pricing amounts to solving an elementary resource-constrained shortest-path problem. We propose an efficient optimization scheme that avoids consideration of every increment within the time windows. We also propose a heuristic pricing algorithm that can efficiently solve the pricing subproblem. While this itself is an important problem, the insights gained from solving these problems effectively can lead to new advances in other time-widow constrained vehicle routing problems.
 
 ############### 2020 ##################
 - key: ChanWoMAPF20
@@ -807,7 +826,7 @@
   venue: AAMAS
   pages: 726-734
   year: 2020
-  url: https://dl.acm.org/doi/abs/10.5555/3398761.3398848
+  publisher: https://dl.acm.org/doi/abs/10.5555/3398761.3398848
   links:
     Slides: /files/slides/AAMAS20-MAiF.pdf
     Long talk: https://underline.io/lecture/375-moving-agents-in-formation-in-congested-environments
@@ -899,7 +918,7 @@
   venue: AAMAS
   pages: 1152-1160
   year: 2019
-  url: https://dl.acm.org/doi/10.5555/3306127.3331816
+  publisher: https://dl.acm.org/doi/10.5555/3306127.3331816
 
 - key: LiAAAI19symmetry
   title: Symmetry-Breaking Constraints for Grid-Based Multi-Agent Path Finding
@@ -951,7 +970,7 @@
   venue: IJCAI
   pages: 417-423
   year: 2018
-  url: https://dl.acm.org/doi/abs/10.5555/3304415.3304475
+  publisher: https://dl.acm.org/doi/abs/10.5555/3304415.3304475
   short_version:
     venue: AAMAS
     year: 2019
@@ -976,4 +995,4 @@
   venue: AAMAS
   pages: 837-845
   year: 2017
-  url: https://dl.acm.org/doi/10.5555/3091125.3091243
+  publisher: https://dl.acm.org/doi/10.5555/3091125.3091243
