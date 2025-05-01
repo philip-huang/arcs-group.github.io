@@ -100,16 +100,19 @@
 
 - key: ZangAAAI25
   title: Online Guidance Graph Optimization for Lifelong Multi-Agent Path Finding
+  site: https://sites.google.com/view/onlineggo
   authors: [Hongzhi Zang, Yulun Zhang, He Jiang, Zhe Chen, Daniel Harabor, Peter J. Stuckey, Jiaoyang Li]
   equal_contributions: [Hongzhi Zang, Yulun Zhang]
   venue: AAAI
-  pages: null
+  pages: 14726-14735
   year: 2025
-  doi: null
+  doi: 10.1609/aaai.v39i14.33614
   tags: [warehouse]
   links:
     arXiv: https://arxiv.org/abs/2411.16506
-    Code: null
+    Code: https://github.com/zanghz21/OnlineGGO
+  abstract: We study the problem of optimizing a guidance policy capable of dynamically guiding the agents for lifelong Multi-Agent Path Finding based on real-time traffic patterns. Multi-Agent Path Finding (MAPF) focuses on moving multiple agents from their starts to goals without collisions. Its lifelong variant, LMAPF, continuously assigns new goals to agents. In this work, we focus on improving the solution quality of PIBT, a state-of-the-art rule-based LMAPF algorithm, by optimizing a policy to generate adaptive guidance. We design two pipelines to incorporate guidance in PIBT in two different ways. We demonstrate the superiority of the optimized policy over both static guidance and human-designed policies. Additionally, we explore scenarios where task distribution changes over time, a challenging yet common situation in real-world applications that is rarely explored in the literature.
+
 
 - key: YanAAAI25
   title: Multi-agent Motion Planning for Differential Drive Robots Through Stationary State Search
@@ -172,15 +175,18 @@
 ############### 2024 ##################
 - key: ZhangIJCAI24
   title: "Guidance Graph Optimization for Lifelong Multi-Agent Path Finding"
+  site: https://yulunzhang.net/publication/zhang2024ggo/
   authors: [Yulun Zhang, He Jiang, Varun Bhatt, Stefanos Nikolaidis, Jiaoyang Li]
   venue: IJCAI
   pages: 311-320
   year: 2024
   doi: 10.24963/ijcai.2024/35
   tags: [warehouse]
+  thumbnail: /files/yulunzhang/thumbnails/ggo.png
   links:
       arXiv: https://arxiv.org/abs/2402.01446
       Code: https://github.com/lunjohnzhang/ggo_public
+  abstract: We study how to use guidance to improve the throughput of lifelong Multi-Agent Path Finding (MAPF). Previous studies have demonstrated that, while incorporating guidance, such as highways, can accelerate MAPF algorithms, this often results in a trade-off with solution quality. In addition, how to generate good guidance automatically remains largely unexplored, with current methods falling short of surpassing manually designed ones. In this work, we introduce the guidance graph as a versatile representation of guidance for lifelong MAPF, framing Guidance Graph Optimization as the task of optimizing its edge weights. We present two GGO algorithms to automatically generate guidance for arbitrary lifelong MAPF algorithms and maps. The first method directly optimizes edge weights, while the second method optimizes an update model capable of generating edge weights. Empirically, we show that (1) our guidance graphs improve the throughput of three representative lifelong MAPF algorithms in eight benchmark maps, and (2) our update model can generate guidance graphs for as large as $93 \times 91$ maps and as many as 3,000 agents.
 
 - key: FriedrichIJCAI24
   title: Scalable Mechanism Design for Multi-Agent Path Finding
@@ -191,9 +197,12 @@
   year: 2024
   doi: 10.24963/ijcai.2024/7
   tags: [mapf]
+  thumbnail: /files/yulunzhang/thumbnails/drone-mech.png
   links:
       arXiv: https://arxiv.org/abs/2401.17044
       Code: https://github.com/lunjohnzhang/MAPF-Mechanism
+      Slides: https://1drv.ms/b/c/6847b8d033285874/Eeco5dx9801JhGedvGUCheUB_-cDJUyejpD8mDxKtgQ90Q?e=XGfJ5q
+  abstract: Multi-Agent Path Finding (MAPF) involves determining paths for multiple agents to travel simultaneously through a shared area toward particular goal locations. This problem is computationally complex, especially when dealing with large numbers of agents, as is common in realistic applications like autonomous vehicle coordination. Finding an optimal solution is often computationally infeasible, making the use of approximate algorithms essential. Adding to the complexity, agents might act in a self-interested and strategic way, possibly misrepresenting their goals to the MAPF algorithm if it benefits them. Although the field of mechanism design offers tools to align incentives, using these tools without careful consideration can fail when only having access to approximately optimal outcomes. Since approximations are crucial for scalable MAPF algorithms, this poses a significant challenge. In this work, we introduce the problem of scalable mechanism design for MAPF and propose three strategyproof mechanisms, two of which even use approximate MAPF algorithms. We test our mechanisms on realistic MAPF domains with problem sizes ranging from dozens to hundreds of agents. Our findings indicate that they improve welfare beyond a simple baseline.
 
 - key: JiangSoCS24
   title: "Scaling Lifelong Multi-Agent Path Finding to More Realistic Settings: Research Challenges and Opportunities"
@@ -344,15 +353,20 @@
 ############### 2023 ##################
 - key: ZhangNeurIPS23
   title: "Arbitrarily Scalable Environment Generators via Neural Cellular Automata"
+  site: https://yulunzhang.net/publication/zhang2023nca/
   authors: [Yulun Zhang, Matthew C. Fontaine, Varun Bhatt, Stefanos Nikolaidis, Jiaoyang Li]
   venue: NeurIPS
   pages: 57212-57225
   year: 2023
   publisher: https://papers.nips.cc/paper_files/paper/2023/hash/b2fbf1c9bc92e7ef2f6cab2e8a3e09af-Abstract-Conference.html
+  tags: [warehouse]
+  thumbnail: /files/yulunzhang/thumbnails/nca_process.gif
   links:
     arXiv: https://arxiv.org/abs/2310.18622
     Code: https://github.com/lunjohnzhang/warehouse_env_gen_nca_public
     Talk: https://slideslive.com/39008681
+  abstract: We study the problem of generating arbitrarily large environments to improve the throughput of multi-robot systems. Prior work proposes Quality Diversity (QD) algorithms as an effective method for optimizing the environments of automated warehouses. However, these approaches optimize only relatively small environments, falling short when it comes to replicating real-world warehouse sizes. The challenge arises from the exponential increase in the search space as the environment size increases. Additionally, the previous methods have only been tested with up to 350 robots in simulations, while practical warehouses could host thousands of robots. In this paper, instead of optimizing environments, we propose to optimize Neural Cellular Automata (NCA) environment generators via QD algorithms. We train a collection of NCA generators with QD algorithms in small environments and then generate arbitrarily large environments from the generators at test time. We show that NCA environment generators maintain consistent, regularized patterns regardless of environment size, significantly enhancing the scalability of multi-robot systems in two different domains with up to 2,350 robots. Additionally, we demonstrate that our method scales a single-agent reinforcement learning policy to arbitrarily large environments with similar patterns.
+
 
 - key: ZhangAR23
   title: "Multi-Robot Geometric Task-and-Motion Planning for Collaborative Manipulation Tasks"
@@ -387,14 +401,18 @@
 
 - key: ZhangIJCAI23
   title: "Multi-Robot Coordination and Layout Design for Automated Warehousing"
+  site: https://yulunzhang.net/publication/zhang2023layout_opt/
   authors: [Yulun Zhang, Matthew C. Fontaine, Varun Bhatt, Stefanos Nikolaidis, Jiaoyang Li]
   venue: IJCAI
   pages: 5503-5511
   year: 2023
   doi: 10.24963/ijcai.2023/611
+  tags: [warehouse]
+  thumbnail: /files/yulunzhang/thumbnails/dsage-map.gif
   links:
     arXiv: https://arxiv.org/abs/2305.06436
     Code: https://github.com/lunjohnzhang/warehouse_env_gen_public
+  abstract: With the rapid progress in Multi-Agent Path Finding (MAPF), researchers have studied how MAPF algorithms can be deployed to coordinate hundreds of robots in large automated warehouses. While most works try to improve the throughput of such warehouses by developing better MAPF algorithms, we focus on improving the throughput by optimizing the warehouse layout. We show that, even with state-of-the-art MAPF algorithms, commonly used human-designed layouts can lead to congestion for warehouses with large numbers of robots and thus have limited scalability. We extend existing automatic scenario generation methods to optimize warehouse layouts. Results show that our optimized warehouse layouts (1) reduce traffic congestion and thus improve throughput, (2) improve the scalability of the automated warehouses by doubling the number of robots in some cases, and (3) are capable of generating layouts with user-specified diversity measures.
 
 - key: LamICAPS23
   title: "Exact Anytime Multi-Agent Path Finding Using Branch-and-Cut-and-Price and Large Neighborhood Search"
