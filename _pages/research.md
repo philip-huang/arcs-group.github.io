@@ -85,6 +85,28 @@ for a team of robotic arms to perform cooperative manipulation and assembly.
 
 ---------------------
 
+### Environment Optimization for Fostering Agent Collaboration
+<img src="/files/jiaoyangli/images/envopt-overview.gif" style="float:right;width:300pt;padding-left:10px;"/>
+While traditional research in multi-agent systems focuses on improving agents' algorithms under fixed environmental settings, 
+our team takes a complementary perspective: We aim to optimize the environment itself to enhance multi-agent performance. 
+
+- [Research overview](/envopt) \[updated: May 2025\].
+
+<details style="margin-top: 0; margin-bottom: 0;">
+    <summary>Relevant publications</summary>
+    {% assign relevant_pubs = site.data.pubs | where: "tags", "envopt" %}
+    <ul style="margin-bottom: 0;">
+        {% for pub in relevant_pubs %}
+            {% include pub-list.html %}
+        {% endfor %}
+    </ul>
+</details>
+
+<br>
+<br>
+
+---------------------
+
 ### Intelligent Traffic Management
 <img src="/files/jiaoyangli/images/flatland.gif" style="float:right;width:200pt;padding-left:10px;"/>
 We aim to develop intelligent planning systems to coordinate

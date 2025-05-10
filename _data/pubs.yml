@@ -38,7 +38,7 @@
   venue: ICRA
   pages: null
   year: 2025
-  tags: [mapf, warehouse]
+  tags: [mapf, warehouse, envopt]
   links:
     arXiv: https://arxiv.org/abs/2410.21415
   abstract: "Lifelong Multi-Agent Path Finding (LMAPF) is a variant of MAPF where agents are continually assigned new 
@@ -107,7 +107,7 @@
   pages: 14726-14735
   year: 2025
   doi: 10.1609/aaai.v39i14.33614
-  tags: [warehouse]
+  tags: [warehouse, envopt]
   links:
     arXiv: https://arxiv.org/abs/2411.16506
     Code: https://github.com/zanghz21/OnlineGGO
@@ -181,7 +181,7 @@
   pages: 311-320
   year: 2024
   doi: 10.24963/ijcai.2024/35
-  tags: [warehouse]
+  tags: [warehouse, envopt]
   thumbnail: /files/yulunzhang/thumbnails/ggo.png
   links:
       arXiv: https://arxiv.org/abs/2402.01446
@@ -212,7 +212,7 @@
   year: 2024
   doi: 10.1609/socs.v17i1.31565
   award: Winner of 2023 League of Robot Runners
-  tags: [mapf, warehouse]
+  tags: [mapf, warehouse, envopt]
   links:
       arXiv: https://arxiv.org/abs/2404.16162
       Code: https://github.com/DiligentPanda/MAPF-LRR2023
@@ -359,7 +359,7 @@
   pages: 57212-57225
   year: 2023
   publisher: https://papers.nips.cc/paper_files/paper/2023/hash/b2fbf1c9bc92e7ef2f6cab2e8a3e09af-Abstract-Conference.html
-  tags: [warehouse]
+  tags: [warehouse, envopt]
   thumbnail: /files/yulunzhang/thumbnails/nca_process.gif
   links:
     arXiv: https://arxiv.org/abs/2310.18622
@@ -407,7 +407,7 @@
   pages: 5503-5511
   year: 2023
   doi: 10.24963/ijcai.2023/611
-  tags: [warehouse]
+  tags: [warehouse, envopt]
   thumbnail: /files/yulunzhang/thumbnails/dsage-map.gif
   links:
     arXiv: https://arxiv.org/abs/2305.06436

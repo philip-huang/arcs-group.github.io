@@ -91,6 +91,7 @@ Success rate is the percentage of MAPF instances solved within a runtime limit o
   - Applying MAPF to **traffic management**.
   - Applying MAPF to multi-robot systems with **heterogeneous and nonholonomic robots**. -->
 
+---------------------
 
 ## Symmetry Reasoning for MAPF
 <img src="/files/jiaoyangli/images/rectangle.png" title="rectangle symmetry" style="float:left;width:250pt;padding-right:10px;"  alt="symmetry"/>
@@ -117,6 +118,7 @@ Relevant publications:
 [10] [target symmetries used for MAPF with precedence constraints](/publications/ZhangAAMAS22), and
 [11] [symmetry reasoning with bounded-suboptimal CBS](/publications/LiAAAI21eecbs).
 
+---------------------
 
 ## Heuristics for MAPF with Conflict-Based Search
 <img src="/files/jiaoyangli/images/heuristics.png" title="heuristic graph" style="float:left;width:250pt;padding-right:10px;" alt="heuristics"/>
@@ -139,6 +141,7 @@ Relevant publications:
 [3] [generalized WDG heuristic for CBS with large agents](/publications/LiAAAI19large), and
 [3] [inadmissible heuristic for bounded-suboptimal CBS](/publications/LiAAAI21eecbs).
 
+---------------------
 
 ## Large Neighborhood Search for MAPF
 <img src="/files/jiaoyangli/images/lns-framework.png" title="LNS framework" style="float:left;width:500pt;padding-right:10px;" alt="heuristics"/>
@@ -159,6 +162,8 @@ Relevant publications:
 [4] [machine learning guided LNS for MAPF](/publications/HuangAAAI22), and
 [5] [LNS for multi-agent task and path planning](/publications/XuIROS22).
 
+---------------------
+
 ## Learning-Guided Planning
 Machine Learning (ML) can complement the search algorithms and boost their performance 
 by automatically discovering policies that are better than the hand-crafted ones and tailoring the randomized heuristics to the instances at hand.
@@ -170,6 +175,8 @@ Relevant publications:
 [1] [ML-guided LNS for MAPF](/publications/HuangAAAI22),
 [2] [ML-guided prioritized planning for MAPF](/publications/ZhangSoCS22), and
 [3] [combining RL with LNS](/publications/WangAAAI25).
+
+---------------------
 
 ## Learning individual policies for agents
 An appealing alternative approach to using heuristic search methods is to use machine learning to directly learn a MAPF

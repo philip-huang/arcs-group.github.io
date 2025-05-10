@@ -121,13 +121,7 @@ Relevant publications:
 The environment that the robots navigate in significantly influence their coordination efficiency and effectiveness. 
 We study how to design good warehouse layouts to improve the coordination efficiency. 
 We also study how to optimize virtual environments, such as guidance graphs, for the robots to enhance their performance.  
-
-Relevant publications: 
-[1] [Direct layout optimization](/publications/ZhangIJCAI23), 
-[2] [Optimizing a layout generator](/publications/ZhangNeurIPS23),
-[3] [Offline guidance graph optimization](/publications/JiangAAAI25),
-[4] [Online guidance graph optimization](/publications/ZangAAAI25), and
-[5] [Dataset and analysis for MAPF in 3D warehouses](/publications/WangICAPS24mapf3d).
+More details can be found [here](/envopt).
 
 <div style="float: right;">
     <button onclick="location.href='/research'" type="button">Back to the Research page</button>
