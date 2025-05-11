@@ -1316,3 +1316,26 @@ pre {
     font-size: 0.9em;
   }
 }
+
+.text-with-figure {
+  overflow: hidden; /* Ensure layout wraps correctly */
+  margin-bottom: 0.1em;
+}
+
+.right-figure {
+  float: right;
+  margin-left: 1em;
+  text-align: center;
+}
+
+.right-figure figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.3em;
+}
+
+.left-figure {
+  float: left;
+  margin-right: 1em;
+  text-align: center;
+}

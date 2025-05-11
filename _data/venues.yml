@@ -57,6 +57,10 @@ PRIMA:
   name: "International Conference on Principles and Practice of Multi-Agent Systems"
   short_name: PRIMA
   type: conference
+RSS:
+  name: "Robotics: Science and Systems"
+  short_name: RSS
+  type: conference
 SoCS:
   name: "Symposium on Combinatorial Search"
   short_name: SoCS

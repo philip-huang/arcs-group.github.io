@@ -31,6 +31,40 @@
 
 ############### 2025 ##################
 
+- key: HuangRSS25
+  title: "APEX-MR: Multi-Robot Asynchronous Planning and Execution for Cooperative Assembly"
+  site: https://intelligent-control-lab.github.io/APEX-MR/  # project page
+  authors: [Philip Huang, Ruixuan Liu, Shobhit Aggarwal, Changliu Liu, Jiaoyang Li]
+  equal_contributions: [Philip Huang, Ruixuan Liu]
+  venue: RSS
+  pages: null
+  year: 2025
+  thumbnail: null  # Save to /files/[your-folder]/
+  award: null
+  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
+  tags: [arm, execution]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2503.15836
+    Talk: https://drive.google.com/file/d/15iYndy__BhI_r0uGmHVpnUeX8OPo3lT_/preview
+  abstract: "Compared to a single-robot workstation, a multi-robot system offers several advantages: 
+            1) it expands the system’s workspace, 2) improves task efficiency, and, more importantly,
+            3) enables robots to achieve significantly more complex and dexterous tasks, such as cooperative assembly. 
+            However, coordinating the tasks and motions of multiple robots is challenging
+            due to issues, e.g., system uncertainty, task efficiency, algorithm scalability, and safety concerns. 
+            To address these challenges, this paper studies multi-robot coordination and proposes APEX-MR,
+            an asynchronous planning and execution framework designed
+            to safely and efficiently coordinate multiple robots to achieve cooperative assembly, e.g., LEGO assembly. 
+            In particular, APEX-MR provides a systematic approach to post-process multi-robot
+            tasks and motion plans to enable robust asynchronous execution under uncertainty. 
+            Experimental results demonstrate that APEX-MR can significantly speed up 
+            the execution time of many long-horizon LEGO assembly tasks by 48% compared to sequential
+            planning and 36% compared to synchronous planning on average. 
+            To further demonstrate performance, we deploy APEX-MR in a dual-arm system to perform physical LEGO assembly.
+            To our knowledge, this is the first robotic system capable of performing customized LEGO assembly using commercial LEGO bricks. 
+            The experimental results demonstrate that the dual-arm system, with APEX-MR, 
+            can safely coordinate robot motions, efficiently collaborate, and construct complex LEGO structures."
+
 - key: JiangICRA25
   title: "Deploying Ten Thousand Robots: Scalable Imitation Learning for Lifelong Multi-Agent Path Finding"
   authors: [He Jiang, Yutong Wang, Rishi Veerapaneni, Tanishq Harish Duhan, Guillaume Adrien Sartoretti, Jiaoyang Li]
