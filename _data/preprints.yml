@@ -23,7 +23,7 @@
   year: 2025
   thumbnail: /files/jiaoyangli/thumbnails/Yan25.png
   eprint: arXiv:2503.04798
-  tags: [mapf, warehouse]
+  tags: [mapf, warehouse, execution]
   links:
     arXiv: https://arxiv.org/abs/2503.04798
     Code: https://github.com/JingtianYan/SMART/
