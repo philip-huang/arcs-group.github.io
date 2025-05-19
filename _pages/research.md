@@ -22,7 +22,7 @@ via a variety of AI and optimization technologies, such as
 constraint reasoning, heuristic search, stochastic local search, and machine learning.
 
 - [Research overview on MAPF algorithms](/mapf) \[updated: September 2022\].
-- [Research overview on generalizing MAPF for various multi-robot systems](/mamp) \[updated: September 2022\].
+- [Research overview on generalizing MAPF for various multi-robot systems](/mamp) \[updated: May 2025\].
 
 <details style="margin-top: 0; margin-bottom: 0;">
     <summary>Relevant publications</summary>
@@ -95,6 +95,31 @@ our team takes a complementary perspective: We aim to optimize the environment i
 <details style="margin-top: 0; margin-bottom: 0;">
     <summary>Relevant publications</summary>
     {% assign relevant_pubs = site.data.pubs | where: "tags", "envopt" %}
+    <ul style="margin-bottom: 0;">
+        {% for pub in relevant_pubs %}
+            {% include pub-list.html %}
+        {% endfor %}
+    </ul>
+</details>
+
+<br>
+<br>
+
+---------------------
+
+### From Plan to Reality: Robust Execution for Multi-Robot Systems
+<img src="/files/jiaoyangli/images/sync-vs-async.gif" title="execution" style="float:right;width:260pt;padding-left:10px;"  alt="overview"/>
+
+While state-of-the-art MAPF planners can generate collision-free paths for hundreds or even thousands of agents within seconds, 
+they often overlook critical real-world factors, such as robot dynamics, timing constraints, and execution uncertainty.
+We aim to bridge this gap by developing a robust and safe multi-robot planning and execution framework 
+that can reliably execute MAPF-generated plans, even when those plans are imperfect or subject to real-world disturbances.
+
+- [Research overview](/execution) \[updated: May 2025\].
+
+<details style="margin-top: 0; margin-bottom: 0;">
+    <summary>Relevant publications</summary>
+    {% assign relevant_pubs = site.data.pubs | where: "tags", "execution" %}
     <ul style="margin-bottom: 0;">
         {% for pub in relevant_pubs %}
             {% include pub-list.html %}

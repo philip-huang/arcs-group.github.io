@@ -154,7 +154,7 @@ this virtual layer can significantly reduce traffic congestion and improve overa
     </p>
 </div>
 
-{% assign target_ids = "ZhangIJCAI24,JiangSoCS24,ZangAAAI25,JiangICRA25" | split: "," %}
+{% assign target_ids = "ZangAAAI25,JiangICRA25,ZhangIJCAI24,JiangSoCS24" | split: "," %}
 <details style="margin-top: 0; margin-bottom: 0;">
     <summary style="color: #666;"><strong>Relevant publications</strong></summary>
     {% for id in target_ids %}

@@ -117,6 +117,8 @@ Relevant publications:
 [3] [Offline re-scheduling of agents' execution](/publications/SuAAAI24), and
 [4] [A motion planning algorithm designed for Differential drive robots](/publications/YanAAAI25).
 
+See more details [here](/execution).
+
 ## Environment Optimization for Multi-Robot Coordination
 The environment that the robots navigate in significantly influence their coordination efficiency and effectiveness. 
 We study how to design good warehouse layouts to improve the coordination efficiency. 
