@@ -72,22 +72,16 @@
   venue: ICRA
   pages: null
   year: 2025
+  thumbnail: # TODO
+  award: Best Paper on Multi-Robot Systems; Best Student Paper
   tags: [mapf, warehouse, envopt]
   links:
     arXiv: https://arxiv.org/abs/2410.21415
-  abstract: "Lifelong Multi-Agent Path Finding (LMAPF) is a variant of MAPF where agents are continually assigned new 
-            goals, necessitating frequent re-planning to accommodate these dynamic changes. Recently, this field has 
-            embraced learning-based methods, which reactively generate single-step actions based on individual local 
-            observations. However, it is still challenging for them to match the performance of the best search-based 
-            algorithms, especially in large-scale settings. This work proposes an imitation-learning-based LMAPF solver 
-            that introduces a novel communication module and systematic single-step collision resolution and global 
-            guidance techniques. Our proposed solver, Scalable Imitation Learning for LMAPF (SILLM), inherits the fast 
-            reasoning speed of learning-based methods and the high solution quality of search-based methods with the 
-            help of modern GPUs. Across six large-scale maps with up to 10,000 agents and varying obstacle structures, 
-            SILLM surpasses the best learning- and search-based baselines, achieving average throughput improvements of 
-            137.7% and 16.0%, respectively. Furthermore, SILLM also beats the winning solution of the 2023 League of 
-            Robot Runners, an international LMAPF competition sponsored by Amazon Robotics. Finally, we validated SILLM 
-            with 10 real robots and 100 virtual robots in a mockup warehouse environment."
+    Code: https://github.com/DiligentPanda/Scalable-Imitation-Learning-for-LMAPF
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: "Lifelong Multi-Agent Path Finding (LMAPF) repeatedly finds collision-free paths for multiple agents that are continually assigned new goals when they reach current ones. Recently, this field has embraced learning-based methods, which reactively generate single-step actions based on individual local observations. However, it is still challenging for them to match the performance of the best search-based algorithms, especially in large-scale settings. This work proposes an imitation-learning-based LMAPF solver that introduces a novel communication module as well as systematic single-step collision resolution and global guidance techniques. Our proposed solver, Scalable Imitation Learning for LMAPF (SILLM), inherits the fast reasoning speed of learning-based methods and the high solution quality of search-based methods with the help of modern GPUs. Across six large-scale maps with up to 10,000 agents and varying obstacle structures, SILLM surpasses the best learning- and search-based baselines, achieving average throughput improvements of 137.7% and 16.0%, respectively. Furthermore, SILLM also beats the winning solution of the 2023 League of Robot Runners, an international LMAPF competition. Finally, we validated SILLM with 10 real robots and 100 virtual robots in a mock warehouse environment."
 
 - key: VeerapaneniICRA25
   title: "Work Smarter Not Harder: Simple Imitation Learning with CS-PIBT Outperforms Large Scale Imitation Learning for MAPF"
@@ -122,7 +116,8 @@
   venue: AAAI
   pages: null
   year: 2025
-  award: null
+  thumbnail: # TODO
+  award: Oral
   doi: null
   tags: [warehouse, execution]
   links:
@@ -131,6 +126,7 @@
     Poster: null
     Slides: null
     Talk: null
+  abstract: "Multi-Agent Path Finding (MAPF) focuses on planning collision-free paths for multiple agents. However, during the execution of a MAPF plan, agents may encounter unexpected delays, which can lead to inefficiencies, deadlocks, or even collisions. To address these issues, the Switchable Temporal Plan Graph provides a framework for finding an acyclic Temporal Plan Graph with the minimum execution cost under delays, ensuring deadlock- and collision-free execution. Unfortunately, existing optimal algorithms, such as Mixed Integer Linear Programming and Graph-Based Switchable Edge Search (GSES), are often too slow for practical use. This paper introduces Improved GSES, which significantly accelerates GSES through four speedup techniques: stronger admissible heuristics, edge grouping, prioritized branching, and incremental implementation. Experiments conducted on four different map types with varying numbers of agents demonstrate that Improved GSES consistently achieves over twice the success rate of GSES and delivers up to a 30-fold speedup on instances where both methods successfully find solutions."
 
 - key: ZangAAAI25
   title: Online Guidance Graph Optimization for Lifelong Multi-Agent Path Finding
@@ -247,9 +243,14 @@
   doi: 10.1609/socs.v17i1.31565
   award: Winner of 2023 League of Robot Runners
   tags: [mapf, warehouse, envopt]
+  thumbnail: # TODO
   links:
       arXiv: https://arxiv.org/abs/2404.16162
       Code: https://github.com/DiligentPanda/MAPF-LRR2023
+      Poster: null
+      Slides: null
+      Talk: https://youtu.be/vXWZ-b6quHc?si=-aIprjGDnRLOaTXi
+  abstract: "Multi-Agent Path Finding (MAPF) is the problem of moving multiple agents from starts to goals without collisions. Lifelong MAPF (LMAPF) extends MAPF by continuously assigning new goals to agents. We present our winning approach to the 2023 League of Robot Runners LMAPF competition, which leads us to several interesting research challenges and future directions. In this paper, we outline three main research challenges. The first challenge is to search for high-quality LMAPF solutions within a limited planning time (e.g., 1s per step) for a large number of agents (e.g., 10,000) or extremely high agent density (e.g., 97.7%). We present future directions such as developing more competitive rule-based and anytime MAPF algorithms and parallelizing state-of-the-art MAPF algorithms. The second challenge is to alleviate congestion and the effect of myopic behaviors in LMAPF algorithms. We present future directions, such as developing moving guidance and traffic rules to reduce congestion, incorporating future prediction and real-time search, and determining the optimal agent number. The third challenge is to bridge the gaps between the LMAPF models used in the literature and real-world applications. We present future directions, such as dealing with more realistic kinodynamic models, execution uncertainty, and evolving systems."  
 
 - key: ShaoulSoCS24
   title: "Unconstraining Multi-Robot Manipulation: Enabling Arbitrary Constraints in ECBS with Bounded Sub-Optimality"
