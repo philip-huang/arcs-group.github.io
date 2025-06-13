@@ -83,6 +83,34 @@ This new direction raises several core research challenges:
         (1) <i>Scalability</i>: The generator can be trained on small layouts and generalize to large-scale environments with thousands of agents.
         (2) <i>Interpretability</i>: The generated layouts exhibit clear local patterns, making them easier to analyze and potentially adapt manually.
     </p>
+    
+</div>
+
+<p>
+    Below shows an example warehouse simulation with 300 robots transporting goods from shelves (black cells) to workstations (pink cells). 
+    Since shelves are non-traversable, robots must position themselves at adjacent endpoints (blue cells) to retrieve items. 
+    In the traditional layout (a), robots frequently experience congestion and deadlocks. 
+    The optimized layout (b) significantly improves flow and reduces congestion. The pattern-aware optimized layout 
+    (c) further enhances interpretability by introducing structured local patterns, while maintaining comparable performance.
+</p>
+
+<div id="wrapper" style="float: left; width: 33%; padding: 10px; text-align: center">
+    <video height="150pt" autoplay loop controls> 
+            <source type="video/mp4" src="/files/jiaoyangli/images/human-designed-map.mp4" /> 
+        </video>
+        <figcaption>(a) Traditional warehouse layout</figcaption>
+</div>
+<div id="wrapper" style="float: left; width: 33%; padding: 10px; text-align: center"> 
+    <video height="150pt" autoplay loop controls> 
+        <source type="video/mp4" src="/files/jiaoyangli/images/dsage-map.mp4" /> 
+    </video>
+    <figcaption>(b) Optimized layout</figcaption>
+</div>
+<div id="wrapper" style="float: left; width: 33%; padding: 10px; text-align: center">
+    <video height="150pt" autoplay loop controls> 
+        <source type="video/mp4" src="/files/jiaoyangli/images/NCA-map.mp4" /> 
+    </video>
+    <figcaption>(c) Optimized layout with patterns</figcaption>
 </div>
 
 {% assign target_ids = "ZhangIJCAI23,ZhangNeurIPS23" | split: "," %}

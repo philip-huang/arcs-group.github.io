@@ -19,13 +19,13 @@ author_profile: true
 <div style="display: flex; flex-wrap: wrap; text-align: center">
     <div style="min-width:300px;flex: 1;margin: 5px;">
         <video width="300px" autoplay loop controls> 
-            <source type="video/mp4" src="https://jiaoyangli.me/images/human-designed-map.mp4" /> 
+            <source type="video/mp4" src="/files/jiaoyangli/images/human-designed-map.mp4" /> 
         </video>
         <figcaption>Traditional human-designed map</figcaption>
     </div>
     <div style="min-width:300px;flex: 1;margin: 5px;">
         <video width="300px" autoplay loop controls> 
-            <source type="video/mp4" src="https://jiaoyangli.me/images/dsage-map.mp4" /> 
+            <source type="video/mp4" src="/files/jiaoyangli/images/dsage-map.mp" /> 
         </video>
         <figcaption>Our designed map</figcaption>
     </div>
