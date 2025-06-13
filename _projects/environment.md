@@ -112,6 +112,7 @@ This new direction raises several core research challenges:
     </video>
     <figcaption>(c) Optimized layout with patterns</figcaption>
 </div>
+<div style="clear:both;"></div>
 
 {% assign target_ids = "ZhangIJCAI23,ZhangNeurIPS23" | split: "," %}
 <details style="margin-top: 0; margin-bottom: 0;">
