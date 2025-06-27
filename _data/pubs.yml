@@ -39,7 +39,7 @@
   venue: RSS
   pages: null
   year: 2025
-  thumbnail: null  # Save to /files/[your-folder]/
+  thumbnail: /files/philiphuang/apex.gif
   award: null
   doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
