@@ -15,7 +15,7 @@
 #  award: null
 #  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
 #  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
-#  tags: [mapf, warehouse, arm, traffic]
+#  tags: [mapf, warehouse, arm, traffic, execution]
 #  links:   # You can add additional links not listed below
 #    arXiv: null
 #    Code: null
@@ -30,6 +30,181 @@
 #  abstract: null
 
 ############### 2025 ##################
+
+- key: HuangSoCS25
+  title: Benchmarking Shortcutting Techniques for Multi-Robot-Arm Motion Planning
+  site: https://philip-huang.github.io/mr-shortcut/
+  authors: [Philip Huang, Yorai Shaoul, Jiaoyang Li]
+  equal_contributions: []
+  venue: IROS
+  pages: null
+  year: 2025
+  thumbnail: null  # Save to /files/[your-folder]/
+  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
+  tags: [arm]
+  links:   # You can add additional links not listed below
+    arXiv: null
+    Code: https://github.com/philip-huang/mr-shortcut
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: "Generating high-quality motion plans for multiple robot
+            arms is challenging due to the high dimensionality of the
+            system and the potential for inter-arm collisions.
+            Traditional motion planning methods often produce motions
+            that are suboptimal in terms of smoothness and execution
+            time for multi-arm systems. Post-processing via
+            shortcutting is a common approach to improve motion quality
+            for efficient and smooth execution. However, in multi-arm
+            scenarios, optimizing one arm's motion must not introduce
+            collisions with other arms. Although existing multi-arm
+            planning works often use some form of shortcutting
+            techniques, their exact methodology and impact on
+            performance are often vaguely described. In this work, we
+            present a comprehensive study quantitatively comparing
+            existing shortcutting methods for multi-arm trajectories
+            across diverse simulated scenarios. We carefully analyze
+            the pros and cons of each shortcutting method and propose
+            two simple strategies for combining these methods to
+            achieve the best performance-runtime tradeoff. Video, code,
+            and dataset are available at
+            https://philip-huang.github.io/mr-shortcut/"
+
+- key: TangIROS25decbs
+  title: Accelerating Focal Search in Multi-Agent Path Finding with Tighter Lower Bounds
+  site: null  # project page
+  authors: [Yimin Tang, Zhenghong Yu, Jiaoyang Li, Sven Koenig]
+  venue: IROS
+  pages: null
+  year: 2025
+  thumbnail: null  # Save to /files/[your-folder]/
+  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  tags: [mapf]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2503.03779
+    Code: https://github.com/HarukiMoriarty/RUST-CBS
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: "Multi-Agent Path Finding (MAPF) involves finding
+              collision-free paths for multiple agents while minimizing a
+              cost function—an NP-hard problem. Bounded suboptimal
+              methods like Enhanced Conflict-Based Search (ECBS) and
+              Explicit Estimation CBS (EECBS) balance solution quality
+              with computational efficiency using focal search
+              mechanisms. While effective, traditional focal search faces
+              a limitation: the lower bound (LB) value determining which
+              nodes enter the FOCAL list often increases slowly in early
+              search stages, resulting in a constrained search space that
+              delays finding valid solutions. In this paper, we propose a
+              novel bounded suboptimal algorithm, double-ECBS (DECBS), to
+              address this issue by first determining the maximum LB
+              value and then employing a best-first search guided by this
+              LB to find a collision-free path. Experimental results
+              demonstrate that DECBS outperforms ECBS in most test cases
+              and is compatible with existing optimization techniques.
+              DECBS can reduce nearly 30% high-level Constraint Tree (CT)
+              nodes and 50% low-level focal search nodes. When agent
+              density is moderate to high, DECBS achieves a 23.5% average
+              runtime improvement over ECBS with identical suboptimality
+              bounds and optimizations."
+
+- key: TangIROS25railgun
+  title: "RAILGUN: A Unified Convolutional Policy for Multi-Agent Path Finding across Different Environments and Tasks"
+  site: null  # project page
+  authors: [Yimin Tang, Xiao Xiong, Jingyi Xi, Jiaoyang Li, Erdem Bıyık, Sven Koenig]
+  equal_contributions: [Yimin Tang, Xiao Xiong]
+  venue: IROS
+  pages: null
+  year: 2025
+  thumbnail: null  # Save to /files/[your-folder]/
+  doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
+  tags: [mapf]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2503.02992
+    Code: null
+    Poster: null
+    Slides: null
+    Talk: null
+  short_version:
+    venue: SoCS
+    year: 2025
+    pages: 273-274
+    url: https://doi.org/10.1609/socs.v18i1.36015
+  abstract: "Multi-Agent Path Finding (MAPF), which focuses on finding
+            collision-free paths for multiple robots, is crucial for
+            applications ranging from aerial swarms to warehouse
+            automation. Solving MAPF is NP-hard so learning-based
+            approaches for MAPF have gained attention, particularly
+            those leveraging deep neural networks. Nonetheless, despite
+            the community's continued efforts, all learning-based MAPF
+            planners still rely on decentralized planning due to
+            variability in the number of agents and map sizes. We have
+            developed the first centralized learning-based policy for
+            MAPF problem called RAILGUN. RAILGUN is not an agent-based
+            policy but a map-based policy. By leveraging a CNN-based
+            architecture, RAILGUN can generalize across different maps
+            and handle any number of agents. We collect trajectories
+            from rule-based methods to train our model in a supervised
+            way. In experiments, RAILGUN outperforms most baseline
+            methods and demonstrates great zero-shot generalization
+            capabilities on various tasks, maps and agent numbers that
+            were not seen in the training dataset."
+
+- key: TanSoCS25
+  title: "Reevaluation of Large Neighborhood Search for MAPF: Findings and Opportunities"
+  site: null  # project page
+  authors: [Jiaqi Tan, Yudong Luo, Jiaoyang Li, Hang Ma]
+  venue: SoCS
+  pages: 212-220
+  year: 2025
+  thumbnail: null  # Save to /files/[your-folder]/
+  doi: 10.1609/socs.v18i1.35996
+  tags: [mapf]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2407.09451
+    Code: https://github.com/ChristinaTan0704/mapf-lns-unified
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: "Multi-Agent Path Finding (MAPF) aims to arrange collision-free goal-reaching paths for a group of agents. Anytime MAPF solvers based on large neighborhood search (LNS) have gained prominence recently due to their flexibility and scalability, leading to a surge of methods, especially those leveraging machine learning, to enhance neighborhood selection. However, several pitfalls exist and hinder a comprehensive evaluation of these new methods, which mainly include: 1) Lower than actual or incorrect baseline performance; 2) Lack of a unified evaluation setting and criterion; 3) Lack of a codebase or executable model for supervised learning methods. To address these challenges, we introduce a unified evaluation framework, implement prior methods, and conduct an extensive comparison of prominent methods. Our evaluation reveals that rule-based heuristics serve as strong baselines, while current learning-based methods show no clear advantage on time efficiency or improvement capacity. Our extensive analysis also opens up new research opportunities for improving MAPF-LNS, such as targeting high-delayed agents, applying contextual algorithms, optimizing replan order and neighborhood size, where machine learning can potentially be integrated."
+
+- key: LiangSoCS25
+  title: Real-Time LaCAM for Real-Time MAPF
+  authors: [Runzhe Liang, Rishi Veerapaneni, Daniel Harabor, Jiaoyang Li, Maxim Likhachev]
+  equal_contributions: [Runzhe Liang, Rishi Veerapaneni]
+  venue: SoCS
+  pages: 196-200
+  year: 2025
+  thumbnail: null  # Save to /files/[your-folder]/
+  doi: 10.1609/socs.v18i1.35993
+  tags: [mapf]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2504.06091
+    Code: null
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: "The vast majority of Multi-Agent Path Finding (MAPF) methods with completeness guarantees require planning full-horizon paths. However, planning full-horizon paths can take too long and be impractical in real-world applications. Instead, real-time planning and execution, which only allows the planner a finite amount of time before executing and replanning, is more practical for real-world multi-agent systems. Several methods utilize real-time planning schemes but none are provably complete, which leads to livelock or deadlock. Our main contribution is Real-Time LaCAM, the first Real-Time MAPF method with provable completeness guarantees. We do this by leveraging LaCAM in an incremental fashion. Our results show how we can iteratively plan for congested environments with a cutoff time of milliseconds while still maintaining the same success rate as full-horizon LaCAM. We also show how it can be used with a single-step learned MAPF policy."
+
+- key: ChanSoCS25
+  title: New Mechanisms in Flex Distribution for Bounded Suboptimal Multi-Agent Path Finding
+  authors: [Shao-Hung Chan, Thomy Phan, Jiaoyang Li, Sven Koenig]
+  equal_contributions: []
+  venue: SoCS
+  pages: 47-55
+  year: 2025
+  thumbnail: null  # Save to /files/[your-folder]/
+  doi: 10.1609/socs.v18i1.35975
+  tags: [mapf]
+  links:   # You can add additional links not listed below
+    arXiv: https://arxiv.org/abs/2507.17054
+    Code: https://github.com/shchan13/EECBS-MFD
+    Poster: null
+    Slides: null
+    Talk: null
+  abstract: "Multi-Agent Path Finding (MAPF) is the problem of finding a set of collision-free paths, one for each agent in a shared environment. Its objective is to minimize the sum of path costs (SOC), where the path cost of each agent is defined as the travel time from its start location to its target location. Explicit Estimation Conflict-Based Search (EECBS) is the leading algorithm for bounded-suboptimal MAPF, with the SOC of the solution being at most a user-specified factor w away from optimal. EECBS maintains sets of paths and a lower bound LB on the optimal SOC. Then, it iteratively selects a set of paths whose SOC is at most w times LB and introduces constraints to resolve collisions. For each path in a set, EECBS maintains a lower bound on its optimal path that satisfies constraints. By finding a path with cost at most its threshold, defined as w times its lower bound, EECBS guarantees to find a bounded-suboptimal solution. To speed up EECBS, previous work uses flex distribution to relax the requirement that each path needs to be at most its threshold. Though EECBS with flex distribution guarantees to find a bounded-suboptimal solution, increasing the thresholds may increase the SOC beyond w times LB, forcing EECBS to switch among different sets of paths (whose SOC are still at most w times LB), and thus reducing efficiency. To address this issue, we propose Conflict-Based Flex Distribution that distributes flex in proportion to the number of collisions. We also estimate the extra travel time (i.e., delays) needed to satisfy constraints and propose Delay-Based Flex Distribution. On top of that, we propose Mixed-Strategy Flex Distribution, combining both in a hierarchical framework. We prove that EECBS with our new flex distribution mechanisms is complete and bounded-suboptimal. The experiments show that our approaches outperform the original (greedy) flex distribution. Also, we redesign Focal-A* search from the previous work to improve LB for a congested environment."
 
 - key: HuangRSS25
   title: "APEX-MR: Multi-Robot Asynchronous Planning and Execution for Cooperative Assembly"
@@ -115,11 +290,11 @@
   title: Speedup Techniques for Switchable Temporal Plan Graph Optimization
   authors: [He Jiang, Muhan Lin, Jiaoyang Li]
   venue: AAAI
-  pages: null
+  pages: 23212-23221
   year: 2025
   thumbnail: /files/hejiang/JiangAAAI25/thumbnail.png
   award: Oral
-  doi: null
+  doi: 10.1609/aaai.v39i22.34487
   tags: [warehouse, execution]
   links:
     arXiv: https://arxiv.org/abs/2412.15908
@@ -150,9 +325,9 @@
   authors: [Jingtian Yan, Jiaoyang Li]
   thumbnail: /files/jingtianyan/aaai25_mass/featured.png
   venue: AAAI
-  pages: null
+  pages: 23360-23368
   year: 2025
-  doi: null
+  doi: 10.1609/aaai.v39i22.34503
   tags: [warehouse, mapf]
   short_version:
     venue: SoCS
@@ -203,6 +378,7 @@
   year: 2025
   doi: null
   tags: [mapf]
+  award: Oral
   links:
     arXiv: https://arxiv.org/abs/2405.17794
 
