@@ -7,7 +7,7 @@
    1. *Locally*: develop and test on your local machine. See instructions [here](#set-up-and-develop-locally).
    2. *Online*: make changes through the GitHub page online. Simple editions, such as adding members or publications, can be done online.
 3. Make changes!
-4. Notify the website manager about your pull requests.
+4. Notify the website manager (Jiaoyang) about your pull requests.
 
 If you are a **new member**, create a new folder in `/files/` with your full name. 
 This folder will be used to store all your files.

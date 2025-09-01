@@ -344,9 +344,9 @@
   title: Windowed MAPF with Completeness Guarantees
   authors: [Rishi Veerapaneni, Muhammad Suhail Saleem, Jiaoyang Li, Maxim Likhachev]
   venue: AAAI
-  pages: null
+  pages: 23323-23332
   year: 2025
-  doi: null
+  doi: 10.1609/aaai.v39i22.34499
   tags: [mapf]
   links:
     arXiv: https://arxiv.org/abs/2410.01798
@@ -374,9 +374,9 @@
   site: null  # project page
   authors: [Yutong Wang, Tanishq Duhan, Jiaoyang Li, Guillaume Adrien Sartoretti]
   venue: AAAI
-  pages: null
+  pages: 23343-23350
   year: 2025
-  doi: null
+  doi: 10.1609/aaai.v39i22.34501
   tags: [mapf]
   award: Oral
   links:
