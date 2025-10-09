@@ -17,8 +17,8 @@
 
 - key: Yan25
   title: "Advancing MAPF towards the Real World: A Scalable Multi-Agent Realistic Testbed (SMART)"
-  site: https://jingtianyan.github.io/publication/2025-smart/
-  authors: [Jingtian Yan, Zhifei Li, William Kang, Yulun Zhang, Stephen Smith, Jiaoyang Li]
+  site: https://jingtianyan.github.io/publication/2025-03-02-smart-testbed
+  authors: [Jingtian Yan, Zhifei Li, William Kang, Kevin Zheng, Yulun Zhang, Zhe Chen, Yue Zhang, Daniel Harabor, Stephen F. Smith, Jiaoyang Li]
   venue: arXiv
   year: 2025
   thumbnail: /files/jiaoyangli/thumbnails/Yan25.png
@@ -27,6 +27,8 @@
   links:
     arXiv: https://arxiv.org/abs/2503.04798
     Code: https://github.com/JingtianYan/SMART/
+    Demo: https://smart-mapf.github.io/demo/
+    Video: https://youtu.be/irtFxMjyJXs
   abstract: "We present Scalable Multi-Agent Realistic Testbed (SMART), a realistic and efficient software tool for evaluating Multi-Agent Path Finding (MAPF) algorithms. MAPF focuses on planning collision-free paths for a group of agents. While state-of-the-art MAPF algorithms can plan paths for hundreds of robots in seconds, they often rely on simplified robot models, making their real-world performance unclear. Researchers typically lack access to hundreds of physical robots in laboratory settings to evaluate the algorithms. Meanwhile, industrial professionals who lack expertise in MAPF require an easy-to-use simulator to efficiently test and understand the performance of MAPF algorithms in their specific settings. SMART fills this gap with several advantages: (1) SMART uses a physics-engine-based simulator to create realistic simulation environments, accounting for complex real-world factors such as robot kinodynamics and execution uncertainties, (2) SMART uses an execution monitor framework based on the Action Dependency Graph, facilitating seamless integration with various MAPF algorithms and robot models, and (3) SMART scales to thousands of robots. In addition, we use SMART to explore and demonstrate research questions about the execution of MAPF algorithms in real-world scenarios. "
 
 
