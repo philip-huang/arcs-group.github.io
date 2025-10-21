@@ -31,7 +31,7 @@
 
 ############### 2025 ##################
 
-- key: HuangSoCS25
+- key: HuangIROS25
   title: Benchmarking Shortcutting Techniques for Multi-Robot-Arm Motion Planning
   site: https://philip-huang.github.io/mr-shortcut/
   authors: [Philip Huang, Yorai Shaoul, Jiaoyang Li]
@@ -39,12 +39,12 @@
   venue: IROS
   pages: null
   year: 2025
-  thumbnail: null  # Save to /files/[your-folder]/
+  thumbnail: /files/philiphuang/mr-shortcut-compressed.gif  # Save to /files/[your-folder]/
   doi: null        # doi is shown in bibtex and used as the link to the publisher site when the publisher field is not defined
   publisher: null  # link to the publisher; we don't need this if the publisher can be reached by https://doi.org/[doi]
   tags: [arm]
   links:   # You can add additional links not listed below
-    arXiv: null
+    arXiv: https://www.arxiv.org/abs/2508.05027
     Code: https://github.com/philip-huang/mr-shortcut
     Poster: null
     Slides: null
